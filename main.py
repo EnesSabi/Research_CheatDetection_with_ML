@@ -45,7 +45,7 @@ with open('all_matches.json', 'w') as file:
 with open('participants.json', 'w') as file:
     json.dump(all_matches["ThePowerOfEvil"][0]["metadata"]["participants"][1:], file, indent=2)                     # TODO: gameName muss parametrisiert werden
 
-
+#Hallo
 
 '''
 for name in summoner_names:
