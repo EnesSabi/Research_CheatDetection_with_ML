@@ -8,3 +8,10 @@ Als weiteren Schritt werde ich eine MongoDB oder MySQL Datenbank errichten und n
 
 Vanguard bietet leider keine Interaktionsmöglichkeiten.
 Keine Datasets über bekannte Cheater.
+
+# Emre 16.05. 
+Live_Client API fertig umgesetzt, 
+moderne GUI erstellt,
+requirements.txt angelegt,
+exe Datei angelegt (funktioniert noch nicht, da die Bibliotheken nicht mitgenommen werden) --> siehe dist\live_client_extraction.exe
+
