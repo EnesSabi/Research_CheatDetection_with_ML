@@ -1,135 +1,135 @@
 [
   {
     "ID": 1,
-    "gameName": "NiakS",
-    "tagLine": "0024",
-    "puuid": "0aKYE_hX1-k7RgZhHYUSCnA3iOtY_4hUFuDjY-yAL8vPDW3O7VsPFhzIbC_FvafGGOTXnO3dfxPDKg"
+    "gameName": "\uc0c8\uc639\uc9c0\ub9c8",
+    "tagLine": "5261",
+    "puuid": "-x1a5O6GxeaDO3t_ZpFleheHZJxEMtLzN9AiZ7aFrNVi8zBTYiv6geV5-_pTHJ5oghDkasl6TJVBzw"
   },
   {
     "ID": 2,
-    "gameName": "Pasameelcelo",
-    "tagLine": "Celo",
-    "puuid": "0wMl1jTd_dG8-_cOtgGiFfeJpXsbix7Vtz0mMg__fAbFsccRoB6m3fVlq_xdAX3MLa2I4EfGZUXIJQ"
-  },
-  {
-    "ID": 3,
-    "gameName": "VeRu",
-    "tagLine": "CIR",
-    "puuid": "127xn3sFgO0L0fZdr9DjolnfsRhdaYRSEchSnjCCpBYIJGb0ZC48k1GVt_tvv3JMsPpXbH5pnLEKSw"
-  },
-  {
-    "ID": 4,
     "gameName": "ThePowerOfEvil",
     "tagLine": "EUW",
     "puuid": "1ZLCKXWJfDlI8VpV7uFjnTatPu65meUMn97Hndc903FRnUZwNa1UarGPFFQsoXLICegjstwJ_QTOSw"
   },
   {
+    "ID": 3,
+    "gameName": "AbyssWatcher",
+    "tagLine": "ESP",
+    "puuid": "2RdIzHKrHNcPrCEfOtdS1IwEtljmvoZHgzQkHTJGjSgPT7SObpFK-yKJAf7pqe7WgLRMB9muPR-lPg"
+  },
+  {
+    "ID": 4,
+    "gameName": "Dorosun",
+    "tagLine": "BDS",
+    "puuid": "3kkkBw4z39m7Yu9pvWE5j4wky1AEhKX0_btQXb4MObcAXTssdhY2UuIyB3mngtsu8TrQd7HQEzvRsQ"
+  },
+  {
     "ID": 5,
-    "gameName": "Animuz",
-    "tagLine": "XDD",
-    "puuid": "2t0hkZNcpmZpMyTTz8C1QIpjlY7vh0xmoou9psF3AGFL-UiONjbF7XwEDOGEk2yrzfQ49b7DDXSVOA"
+    "gameName": "Jabra",
+    "tagLine": "1017",
+    "puuid": "4gVgkBA7zPZYJ4dUTTHcOVHgauPS6lLPXpzN6CMlndhucQXUs6Li25mUpDHyZFLNfpawqjZoWgCfgA"
   },
   {
     "ID": 6,
-    "gameName": "Shaft",
-    "tagLine": "EEE",
-    "puuid": "3dl91MEdyLCQYBETx4iZ6AQoMnyoMmRgPRPeQgVTogX5YYGrWK0uE_F1nih0tfQ4HMpO182PjA5__w"
+    "gameName": "T1 Kama Or Kunai",
+    "tagLine": "Akali",
+    "puuid": "6SHMb3SImhJdJ0MovZpx0YQkV2ThU8aaSTw2VLVistHKiIOK920qpT6WYzZiILZPewEBBlLKN9o8DA"
   },
   {
     "ID": 7,
-    "gameName": "Relative Lie",
+    "gameName": "boomiavec2o",
     "tagLine": "EUW",
-    "puuid": "4I8k9uar5xpqrDaEsVaRJLrUBrp6Sc382Ov7TSIy-y4m_IbUZnDuaUYOOBBdXNbpeal0ZtNBNbhDHw"
+    "puuid": "ANavIsgvJUblFHdhCGQTDIj4ygD0mFHDZW3XHiOYUPI5NsNUb2QwRILfalAmozNnBbYw_73Llag6Og"
   },
   {
     "ID": 8,
-    "gameName": "LwyN",
-    "tagLine": "EUW",
-    "puuid": "4i55gclkVzOVCOjfzi3YZEnc0MxNTOAGXLqLCDgM2il5k1k4JQRyXiMXCijfFtnkvhE9Hsxsb4xMgA"
+    "gameName": "Anes\u00fc",
+    "tagLine": "1017",
+    "puuid": "BIVjwob0A4wQB67rgDd-RMUeEhLMKfEEP3uX4NGpP2KEK_i2NOsqFeco9C4JyBrvtluoG4wXx0rRQw"
   },
   {
     "ID": 9,
-    "gameName": "Caddeee59A",
-    "tagLine": "EUW",
-    "puuid": "4nBuOBNXSQaDstjxSlUH56czS76pHI1LV1cfmVtjL5mnT0p8cgBjUlJIlgHzhB8z5_U0cncuY0M0FQ"
+    "gameName": "bro",
+    "tagLine": "han",
+    "puuid": "CO1ZIbLZpKPmS752iKqagMW8Xntf4E1J8sfnkpfAAnMNu8l3BtQFIQZhr-UCGGqXD48-IqKbV2jnEw"
   },
   {
     "ID": 10,
-    "gameName": "Ketrab",
-    "tagLine": "jultu",
-    "puuid": "6jB9k2_YshDq1D9PltmJ4-Lm3KRnyEDcpajSV4c4obFU7wiO7rGwJGnOYAfWUBngrigmYW8Qz6BKYQ"
-  },
-  {
-    "ID": 11,
-    "gameName": "niinim",
-    "tagLine": "\u30fc\u03c9\u30fc",
-    "puuid": "74vYXzi4aTWXoTqk8GdUUst7-pChCGuWhg1hVLWKCzDkEDZZ1zMxgTb6s3x43VVFqkub8bDYoQP5Tg"
-  },
-  {
-    "ID": 12,
-    "gameName": "SSR player",
-    "tagLine": "EUW",
-    "puuid": "8OQonUZDefisns2tIeaY2rBOncpkjyHgrn4l3pMYRpifuiYCFXvma0MaJk-1lmCJ7MZumW2jt-q4fw"
-  },
-  {
-    "ID": 13,
-    "gameName": "Lexi Hartmann",
-    "tagLine": "F\u00fct",
-    "puuid": "8Qh4uACS904mqFYOxqDENu32p1_hmQt0fE7cp4lxu-r5HaeupbHzsiHFvm98BsSfF9Nj_9xbeb11BA"
-  },
-  {
-    "ID": 14,
-    "gameName": "RufusGB",
-    "tagLine": "EUW",
-    "puuid": "90iTLI8w2bL8gdin6HEzlbTWkWhPKtnhaOEmj5B7abkYm20UpE77rb3v5HfK5PPgCtE4v2HNpgox_g"
-  },
-  {
-    "ID": 15,
-    "gameName": "Kite Machine v2",
-    "tagLine": "EUW11",
-    "puuid": "99nc1fd5F26q9bqvsY7pDHcMJWlPqJmf4FfSlN24cTjn0iiCkfNln69rUPDT8OCX3MIvIAh-igPnig"
-  },
-  {
-    "ID": 16,
-    "gameName": "sentino fan",
-    "tagLine": "gm2l",
-    "puuid": "AGgIqD4CpIgxPdR3uKXGXr_teO39NgO3Q6vpJja4JKhj6ssOTagMV86XzcWccVLZbQMfkAtE0S70iw"
-  },
-  {
-    "ID": 17,
     "gameName": "Jake Peralta",
     "tagLine": "Lilip",
     "puuid": "COiXTl-12BlR3keNKx8yp875BshPAcMmy1WYbGWeoQcwnx4Ejn3gb2yUH_mxD6ABnsNeV22GsfTvyQ"
   },
   {
-    "ID": 18,
-    "gameName": "Don Mabi",
+    "ID": 11,
+    "gameName": "Dawidsonek",
+    "tagLine": "2137",
+    "puuid": "EPIuqSyDRCkxxTvLAfmfboMpLDp68W7pCYu1c2s5Cmb6A00bs7EGzwLKpU575NUfkkg_eis0uHBHYw"
+  },
+  {
+    "ID": 12,
+    "gameName": "MUTANT TOPLANER",
     "tagLine": "EUW",
-    "puuid": "DCldLx36y3gR7PvvjL4GYtECmI88GV7lyw5RD3G1OqnhrmMtyUY90G-S27A_2_Um29gb_bzFw3dz0w"
+    "puuid": "Eh8W_fATL06_PJn8RbfBjK1Ojy8ZhUiFUfU7714HS0io4J4HhjUBLBJ13liMo8j1Wd0pp5LeMzqmwg"
   },
   {
-    "ID": 19,
-    "gameName": "Zoophobias",
-    "tagLine": "WEST",
-    "puuid": "G8OzwCaene2frqGCdwsyrZlERtmN8xGpHsPGvldBKA1M1OdYT-VAo73ku01jv68ERrZ-7CRW3xWjkA"
+    "ID": 13,
+    "gameName": "TB clown moment",
+    "tagLine": "000",
+    "puuid": "EvV71vyn8O4IGKCNcsuxrdr4Je_b4S7MABPYLoBUtNlMF6RT7H1EGN6tO5rQtbXzZzX4w9D06rIzfw"
   },
   {
-    "ID": 20,
+    "ID": 14,
+    "gameName": "\u0415\u043c\u0435\u043b\u044c\u044f\u043d\u0435\u043d\u043a\u043e",
+    "tagLine": "141",
+    "puuid": "FMdy9Xme3ss9ObmFv5GNWUNIYwcJIYoMRbhR5rwcMuc3EbpIVmaA6tbq3EQqD6NBuYFbmSQuXQriZA"
+  },
+  {
+    "ID": 15,
+    "gameName": "Konaern",
+    "tagLine": "EUW",
+    "puuid": "G-J0bcCtWKwX3NQcsrsnXOkdfxBYHKCrI_oCaLAkCT5Iew5fDfkSn90l-ltC5fosEgS40R_BZgVPcg"
+  },
+  {
+    "ID": 16,
+    "gameName": "Oompa Looompa",
+    "tagLine": "EUW",
+    "puuid": "HAkAjLtnxQanddkJ87CazkTixev4U8bi9NB_sOZdUnoCVR0MNwwsHZOjtDUSwuveVdjeibfUbWLRNA"
+  },
+  {
+    "ID": 17,
     "gameName": "Pride",
     "tagLine": "persi",
     "puuid": "HfvURiz37uvbFonQdg9GwSukNYu0u0X9GASTI2EkvbiRErngxyCPc8Xmh64RKTyhmB4UCXpzrGtdYw"
   },
   {
-    "ID": 21,
+    "ID": 18,
+    "gameName": "Zwyr\u00f8\u00f8",
+    "tagLine": "soul",
+    "puuid": "IW4envruiFj7Z3xAcGQdbD99tKKoTbFIDOXpYLHpxzfnJx4cPHud0e6-TbrgqL0DoplWiWu8Lig0pg"
+  },
+  {
+    "ID": 19,
     "gameName": "Zanzarah",
     "tagLine": "1996",
     "puuid": "IdZUfrplcC6alIrNvxfgvzko8NgdxYObh8bTztKK8EUX4wo6VI0EK6NrBrZmsqw4mb3HBeA4VPKcyQ"
   },
   {
+    "ID": 20,
+    "gameName": "ROX Gary",
+    "tagLine": "AEAE",
+    "puuid": "JA4SarndSOjib-MlNfMSPOvaO07hy9KJokj9bHFkzxVpuozvnT-d-YN328K6_W04FoEdb-VF_3pBJA"
+  },
+  {
+    "ID": 21,
+    "gameName": "Bob Loss",
+    "tagLine": "Hum",
+    "puuid": "JBkqpg4lck-DQKNtIo4YM3IQURkFHnMFvbVXIGjx94-o_m66VSf1mDkK6KJwymtGs4wa2LdwTYM21Q"
+  },
+  {
     "ID": 22,
-    "gameName": "et pium desideri",
-    "tagLine": "mirza",
-    "puuid": "L7DYOdZcUEmQ5AiYxiw2yhXq9clVzxzT6cIk9638OO8Tdb_iX5pAfutDBgIz-fl4RaETji8dv-Gghg"
+    "gameName": "ToongE",
+    "tagLine": "FSK",
+    "puuid": "KMf7-5qBrbJ-kiJp-yOHSJEs6GjsJLX3VQ8z43yD-2_Wpk6IvoSgjB31U4JSQiZn2ZUnMitOwpps_w"
   },
   {
     "ID": 23,
@@ -139,290 +139,284 @@
   },
   {
     "ID": 24,
-    "gameName": "yirazu",
-    "tagLine": "000",
-    "puuid": "LhknPC1DzSMdBJDIqHuYQQuPkksFqyEEaRkjSolShadTIAZ9B5-ilnWlPd4FQbuuAjax0VZFxZfH-Q"
+    "gameName": "Anya",
+    "tagLine": "135",
+    "puuid": "MTqFD9BAedXht0FRXAmSsp1IX0ntd1HTnh2YrZOJLLdr40nsrW1LXMuu-hc0sr53m3RFrP1E3lzhZQ"
   },
   {
     "ID": 25,
-    "gameName": "GRP BANDYTA",
-    "tagLine": "EUW",
-    "puuid": "PczcFtMceMFm-z-6T3RcJPVoTC8IzeSaxmTqps31H-JOPaFs_Fyige8pEUimf7VkwPJd5PNJh2s8iw"
+    "gameName": "Jin Seong Park",
+    "tagLine": "zzz",
+    "puuid": "NHcbsISu1X6dffUlR115N9h_Fx2QYJE8Le_rJJVVihLLfpQ19ivdDk01TUMBu3AIJ7BmO3IJQivi0w"
   },
   {
     "ID": 26,
-    "gameName": "Extrale",
-    "tagLine": "EUW",
-    "puuid": "QmNq6X0Pl5HGzlXQ4S5nGiUK86fTdikuzFtYDJh5tUJXKFIlyYNspxPAJQBlnck7PU4Z9pMvpP-QcQ"
+    "gameName": "Bellooli",
+    "tagLine": "Visca",
+    "puuid": "O3OBYru-4GMgWWjXOr1YzwtFHMSzmh8WiJgMPavLhqBgq_QYgrI1xDyiMlrmhaAs9TNnCufPJ_V_NQ"
   },
   {
     "ID": 27,
-    "gameName": "Danyyoy",
-    "tagLine": "EUW",
-    "puuid": "RJ1WodmQ3JcWgDP4nOQPQkZprxLPuVh-pP_u6SwYOrpRzR_nAWxweG3BSU60BK5k4XpZ4kGIVjvRyA"
+    "gameName": "GW Matias",
+    "tagLine": "971",
+    "puuid": "OLERamRBzUJHrQGmuTTOQxdQjjSwiWB0eRam71fP56pRD_p0dL9Uue8NHj1KSsyTDuACNmAZWA8luA"
   },
   {
     "ID": 28,
-    "gameName": "kaspar josef",
-    "tagLine": "riku",
-    "puuid": "RduQ88kBp2hsGR5OSEJ5OnM-9exR8InNd-V2pn27dYpqPstr6qbAUekrPDXrKDSRRFuQXePPDykLkg"
+    "gameName": "fear dagger",
+    "tagLine": "4810",
+    "puuid": "PwqBrNMi-_URy12C1009BV07L2-R4WgQtCI1u6P-KSBTOVEPyjkK7iz3dWN9dWqlF6j_HjJHyxCviQ"
   },
   {
     "ID": 29,
+    "gameName": "Sh\u00ebun",
+    "tagLine": "2530",
+    "puuid": "QAR02mhT8UGN2bsHhpZalCI7PTurJ1FNN0gKshUvg4trOPfANGaXE2wwIh2VE8lWYQX9ScyFs4PM1A"
+  },
+  {
+    "ID": 30,
+    "gameName": "Bonnie",
+    "tagLine": "BLDP",
+    "puuid": "Qqo51QI7dyN1fWZvchr7o85AluWmkQWYIKBObNfp2MIg-VpGwG2p2D-o6kk7GSiwP8epVMEZENTMrA"
+  },
+  {
+    "ID": 31,
     "gameName": "Broeki",
     "tagLine": "EUW",
     "puuid": "RosOpUt5E8QC_cXQ-gEpKJjtJRtsxUZsk43SCm6EaflniOcYqGUYc8-7VUOBHQZmja0-FR-nWjPIXA"
   },
   {
-    "ID": 30,
-    "gameName": "TheRoyalKanin",
-    "tagLine": "EUW",
-    "puuid": "SsjcFzgi01tr5Wpwt-FFu9TMgL14I4BBciMrhrYtEBiFyJJRi0ytbn-SKe8D0dM9nhb4g_KbadUM1Q"
-  },
-  {
-    "ID": 31,
-    "gameName": "Hichem",
-    "tagLine": "2602",
-    "puuid": "T3saEiJQoBXMgUlBi3h9a_Vkim1ZWnIQPkw2OxSNw6RQhNnCV8ceQcEHjdRjGb2qroOe4v0NiyKd7A"
-  },
-  {
     "ID": 32,
-    "gameName": "sadder and worse",
-    "tagLine": "1111",
-    "puuid": "UmH95V_tdVntlRiz6BLSDSJq5CmP5F_cS__qzNPZh0zjuh6zlg7_mEMsjlB-XsfJedd7X0xv272hYQ"
+    "gameName": "Atlas",
+    "tagLine": "KRKR",
+    "puuid": "RqYXo0KImPSfxEO52vpUv8mj_qVtRVYzoJ7oOl06m48pB8Jg9IoNLV7tm81uzKFcOa9O5LAZ7vUpJQ"
   },
   {
     "ID": 33,
-    "gameName": "septico1",
+    "gameName": "Teckhie",
     "tagLine": "EUW",
-    "puuid": "ZCt-0tYvUut-CtteO1lzEduaeRxaG0J5ljpsoeY9qLlYbOP9mfocSo7_gDF5QAxOUn8hEM_NUXSckw"
+    "puuid": "S5aESfsAR2mbk0aZXwY84vFQ7_FBkG1vfB_4_B_Pa5KxEfqRCehwHOEFhT8SQzqh5wjY1LqCxL8iZA"
   },
   {
     "ID": 34,
-    "gameName": "\ud589\ubcf5\ud558\ub2e4\ud589\ubcf5\ud558\ub2e4",
-    "tagLine": "ADC",
-    "puuid": "_XBpdmmjwPd8Bzu_TrahQkxdz-Uec6hl0nhauA2o6GBuc4TiruaH8xDMmDn3K9ioGree4ahTYXkhoQ"
+    "gameName": "spoko stary",
+    "tagLine": "tmt",
+    "puuid": "TnFk5s_rg2qBlwLzzY2DNrzUwFCWX9zL8XMhxe_KO3pEEW2gDh2SXh7aMVoVrwmbXKF9rgHkuwoOsg"
   },
   {
     "ID": 35,
-    "gameName": "wx PAPITO",
-    "tagLine": "jesus",
-    "puuid": "_q5quGYdzqenrhFSAfZjUBMVj22b5AwXYOFMaH2FYlz2Q3KcvOCJRIlMkO2djJsEZ7oTYuH-aaBLug"
+    "gameName": "Caitlyn Kiramman",
+    "tagLine": "YI7",
+    "puuid": "UIHHzHW4iqUyN1SCtr-Xbv0hF5-hBNwkBq5OBxqliy0adR_3G_ubKsVdpj545j9PYfdGlZzorF59Og"
   },
   {
     "ID": 36,
-    "gameName": "\u0442\u0446\u043a \u043b\u044e\u0434\u043e\u043b\u043e\u0432",
-    "tagLine": "\u0441\u0432\u043e",
-    "puuid": "abZ55eOGFDMgdgkpKdNsudDi98qmqxx25KRJ_TRiVPczk5SpDnlZ53nQ72CN-1Rnt98N9mJyZ0x4tw"
+    "gameName": "GrompulusKevin\u00ba",
+    "tagLine": "EUW",
+    "puuid": "WGo81hQ-jUtrWyJBCr1H-SEOe88bvzPeErZFvf0zIVJBeQdSJU8BO6l8NEhySgWRM_G31R74rc8pHQ"
   },
   {
     "ID": 37,
-    "gameName": "Mystogan",
-    "tagLine": "DING",
-    "puuid": "abtgjeGQyikLoGRfOUhRHvkkOm7MWZCKGj58bEu6iwXN_D5bvrytWEZuQH-QAV7llelO8aBvo9u47w"
+    "gameName": "NanahiraLover",
+    "tagLine": "Stoic",
+    "puuid": "WM7VdjHQ7IuF6Tfr_BccqY7fE04dgJyPwbFpk2CfthcwRNiDKNkOdovONHvqO7NS-tms-uMde6ZyoQ"
   },
   {
     "ID": 38,
+    "gameName": "VLADIM\u00cdR\u0160AMANSK\u00dd",
+    "tagLine": "MYSL",
+    "puuid": "WQnwsO7XLapDw6Fr9jsQudmLIdVoTQt8hu7bDGHP23FWvSXFIjSWdcHKa0jlW4IeKuRXRFVm1lxU9g"
+  },
+  {
+    "ID": 39,
+    "gameName": "Maximus",
+    "tagLine": "WCS",
+    "puuid": "WVfsUOTpXMa4dyqSb7a52Tr8C9Bs-oIKAuQ6v_96Bo7JtuTL8yze8KDBoCebfvdoYI0xFG58z3QIRw"
+  },
+  {
+    "ID": 40,
+    "gameName": "NEP Zerkome",
+    "tagLine": "EUW03",
+    "puuid": "WjnapE6g9QOF0eV7mSByCbEhvbmWCw28ipiM3b1XZpD9qD4vXpuA-xT6tIhQ8sM2lcmKBkC_hfJHjA"
+  },
+  {
+    "ID": 41,
+    "gameName": "Jeong Jihoon",
+    "tagLine": "\uc815\uc9c0\ud6c8\uc815",
+    "puuid": "Wt5Mpe_uylKMyczUyfE-aLPvjByI6vpbemC11oS3UIp5XY1BMkHlBsUqRRZ8F5uPK1bQo2d7tJK69g"
+  },
+  {
+    "ID": 42,
+    "gameName": "Makk",
+    "tagLine": "POGU",
+    "puuid": "WyYPwyIKAR7IaBFOC9nHCPC4cposLsKFfZdFGmzZ1BoiorPlMaeXZpnrS_85HzKPg9NulmLd0a3GEQ"
+  },
+  {
+    "ID": 43,
+    "gameName": "King Of Kizomba",
+    "tagLine": "EUW",
+    "puuid": "YVD3xHcQNUYVH96wdATkb1v5fLHIiU6hsZxIXa-JAhFT06QSyGWrMhBP1wlNNLJ4bTy2QZgZlZjtsQ"
+  },
+  {
+    "ID": 44,
+    "gameName": "BlastoiseADC",
+    "tagLine": "adc",
+    "puuid": "YpngnEZLhqRpfeVcAp9Pa2vxC2goQCk4eg-Xoij2-aqP8X-dkFp8w7Hz6WeG1eaV9BkjjGxbWVaHrQ"
+  },
+  {
+    "ID": 45,
+    "gameName": "twtv kluckadell",
+    "tagLine": "fist",
+    "puuid": "ZcKhCYZUWvZFx8iMEMiZ1GXD9zkuSmJ4tpXUARxapZIZP8BMMHjCWnJfeHzMIWgkheqJdEdK21M1Qg"
+  },
+  {
+    "ID": 46,
+    "gameName": "note",
+    "tagLine": "Ryuk",
+    "puuid": "_8FqWfv0Lj8t8FbnGJY6OqZPRKFP8lC03VNkRZBB8UzxUsVr4yo0qYeodaMAS6Wp6G2Hm7p6m-hkTw"
+  },
+  {
+    "ID": 47,
     "gameName": "Agurin",
     "tagLine": "DND",
     "puuid": "ajEBAJhXVcgnNfn0NQnJLa63O49gAls42X1Hkg_u5eZU4wKTNGL0Txa97KjPbrrzgfKVYKFWq9kXFQ"
   },
   {
-    "ID": 39,
-    "gameName": "Yikesuo",
-    "tagLine": "Yikes",
-    "puuid": "bAT1XZNNeq-4Zkeea-j8xEhEbvgK_RKlEguUxUFkvP3G8XkEAb1BaAqfZuId8X_XOit-X94v6iVFTA"
-  },
-  {
-    "ID": 40,
-    "gameName": "Euvoluindo",
-    "tagLine": "BR12",
-    "puuid": "bOMekI1Eayi_Gboo7OHQCdzpwWZCewQNAAF_aap-HQTSmbuv_nmjwL9unMChphgmnz1hdvJaXJukzA"
-  },
-  {
-    "ID": 41,
-    "gameName": "Midlane Opa",
-    "tagLine": "EUW",
-    "puuid": "dSQwNLFOx4_j9PtKpY9M0LZbgD8ZwPUq7BL9smdwrmAbIEWQ9T_zRXMgRBbKApcq-UMfms-3Jk1SuA"
-  },
-  {
-    "ID": 42,
-    "gameName": "ysam",
-    "tagLine": "007",
-    "puuid": "ezJ3UgBYd7x3oce65qQEJqmAYOl138Vkkmumir_y0_Y_wTyC6pmg9t6MyUgtf-k6C1ybE8ju0VxM0A"
-  },
-  {
-    "ID": 43,
-    "gameName": "UCLTOP",
-    "tagLine": "05090",
-    "puuid": "fsWKPGVj2axnqlLGHOqzT1sdTY2KJ-b1GgH7DJhIi9ZvOKL63Sxu6hiWNppvpJXxstPkZoUKsTKDPg"
-  },
-  {
-    "ID": 44,
-    "gameName": "sanikshadow",
-    "tagLine": "EUW",
-    "puuid": "gr4KFS9HZ4FV2kQGN67LzejRIA7v9Irm5Cj3AeEZWG5jsCkhEWpp2Ndp4mwHQRKHpz9Q09uW6-bR6Q"
-  },
-  {
-    "ID": 45,
-    "gameName": "\u9ed1\u8272\u6bdb\u8863",
-    "tagLine": "00914",
-    "puuid": "h795xBkTylne79iOQ4DZDaVk5kvTvGSsUZqeQPH5_K898IHyxsmcv_59uxhNjRNktD7n9BvAsl20iw"
-  },
-  {
-    "ID": 46,
-    "gameName": "jhinsamiradraven",
-    "tagLine": "EUW",
-    "puuid": "j90-eiHX-nEOB4Qgcx2cb10r7vnD3l8YpROXfCjKPeFq10W4OUzAoEIl_rXlPyE0BZFTX6pIC57eKw"
-  },
-  {
-    "ID": 47,
-    "gameName": "Artix von",
-    "tagLine": "12345",
-    "puuid": "jOyYOvrNcpYLJ_N7p_7mMB3bCe-iAIDd9i3sZ5VVw1hGDSn4JpDvUtXPS2lUCh5t_c4SEicbvm9OKQ"
-  },
-  {
     "ID": 48,
+    "gameName": "iliyan",
+    "tagLine": "EUW",
+    "puuid": "ajca7xC9j_Mr-xii9zVTBFO9qmr69mVd_nUhHYKL_7YLdeV6BN8jTJSIg9gSKxLFATO35ppWDSqW4w"
+  },
+  {
+    "ID": 49,
+    "gameName": "self acceptance",
+    "tagLine": "1612",
+    "puuid": "efg-0FUrnMNjiFj1IR_mI-4eq65bGJpwcpRkMBlrN4-CTPzBVqTTLJSkR_aJtF4q6dvmZCu7c84zmw"
+  },
+  {
+    "ID": 50,
+    "gameName": "MadScientist",
+    "tagLine": "TTV",
+    "puuid": "fBAZWPXkY-gR_mwFpXRKHtdITWZNTKVEDVdcpsveLTr_vTH9QRpHjQW_JQGnXnEbeFxUs2D1gAV1bA"
+  },
+  {
+    "ID": 51,
+    "gameName": "Vr\u00eacal",
+    "tagLine": "V0J4S",
+    "puuid": "j3YIS1A8IDW6cq1obRtaj_-Bqz107lH-NmpxFAT34ze45qfGF7gk08pqDgPRtq1fp8-VSb9QxNT7sQ"
+  },
+  {
+    "ID": 52,
     "gameName": "Hantera",
     "tagLine": "DOUZE",
     "puuid": "kiZo6UwvvewDAbD-gSTQWPDqQaPBjMXBuhxGBx5-6k09OFKyZ4vGe15-x-H4if8Mhf7gR3efs-K8SQ"
   },
   {
-    "ID": 49,
-    "gameName": "Exan",
-    "tagLine": "rain",
-    "puuid": "knf7vOTEqKwdgjQxEN_RIy_kSvFPfvI-iUZAXxZrtij4SYkAYgseC5Elvle1vv_ITLpf584Oc5gMGg"
-  },
-  {
-    "ID": 50,
-    "gameName": "Pikkkkkkkkkkkkkk",
-    "tagLine": "TNLU",
-    "puuid": "li01dAXFfrnKT3OzQqXLPXuX-QADZ8nK1cgD8OqHdpjDvPdYa009xkhIR3ASd8KLTviQkafPk6JD9Q"
-  },
-  {
-    "ID": 51,
-    "gameName": "ThreeBellz",
-    "tagLine": "EUW",
-    "puuid": "luW5uKDmHTO3W4oi4zuw9z2hA45FrlKZS8J_inhxzCony1K48QN-cJDyeKb7btYfvSYQfrasGsndZw"
-  },
-  {
-    "ID": 52,
-    "gameName": "TwoStone",
-    "tagLine": "2222",
-    "puuid": "lzQQjBWtPndLc9q_cYGLV6usdC0puwcFOpAwUR0KvlR_kRfgNpiszNldh0Gj-ZbYIMu3ZeMoIxnFlg"
-  },
-  {
     "ID": 53,
-    "gameName": "TTV Cezzy",
-    "tagLine": "cezzy",
-    "puuid": "mtBv4J_H8y3Qjmc2qYdONkLAssI62kuypsDOo9RcnXtY4FvkIU8A4RkEkttGrH_x6mxJrhOhgCLM_g"
+    "gameName": "zzhuo",
+    "tagLine": "zzz",
+    "puuid": "mVQfLZOKyfcGjZnQ3epAdvrxJCMrnYJovhQS8Qa-6EvjMmpMr1E3ZSwIbmIgLB41auWrOiTNQGJweg"
   },
   {
     "ID": 54,
-    "gameName": "Man feet lover",
-    "tagLine": "5403",
-    "puuid": "nEXJMP2jyBKbrSf7aLC3ETMTOHDj3OZbCkpLxpdZrXq3grcRd9PVfUN22YXxSTDDFWoe5JJK0AHWzg"
+    "gameName": "AOMA Trailblazer",
+    "tagLine": "AOMA",
+    "puuid": "mfGegbExduR4JS6S1NqUuSWSV6Yhhfd-x6Cm3pIvHaBMIDKS1oTayCDerITu2FmNZeF24hIID2LMSg"
   },
   {
     "ID": 55,
-    "gameName": "Goldenpenny",
-    "tagLine": "EUW",
-    "puuid": "nYh9WNxEzkBXSsiEHdX0sulCdYvA4Q5O78FU-DaF5fJqhRioUdl0hGqInZafNAFljM__yDWWkFIaKA"
+    "gameName": "Farmer Boy",
+    "tagLine": "KAMI",
+    "puuid": "nf9RvSj4fhFrCn6lJmvitQNDse6LneCle9yJJOg2R6ZCfad5JsiSK57C7PtZeVGLLmrvuoqywM5gdQ"
   },
   {
     "ID": 56,
-    "gameName": "GernhardEinloche",
-    "tagLine": "fut",
-    "puuid": "oGVERhsq7y7q3mI-NlKBrhyqfZgyoA37vPZsRzOp26H3HYtfIXUK7sqgzNPL8VF6nztGpTcr2WfKYQ"
+    "gameName": "Geishu",
+    "tagLine": "TTV",
+    "puuid": "oB50TfZ8zw9-Atbh00w0gdYuzYEladnuJ5J5Yh_F1uqXv2Y3_aDatvou6O5VOh042pMC6oXrgBWMjA"
   },
   {
     "ID": 57,
-    "gameName": "ge\u00e7tidostkervan\u0131",
-    "tagLine": "hidu",
-    "puuid": "oo-zui9e_3VglkU1EfacWVpVXGVAtasA0iUcsizsEW5VqldsAbh_jvJxJLKmYgfXA3bBrAO_o0_bRg"
+    "gameName": "Zenith",
+    "tagLine": "YGNZN",
+    "puuid": "oCX6ooSv9I7Ivv3x80xT_lOKNjZPV5jQCPStEGwLn5XvDAtxOvdgOOXGGxd4-gwBJLbeg3HfHuD2og"
   },
   {
     "ID": 58,
-    "gameName": "Dangerous Dork",
-    "tagLine": "Lick",
-    "puuid": "pz5cgv1_n-WABFPFGTRO9vBgfFbEPlPlax2uFDZkLT8SG47y8hhSfLwAJRMrToe_8a96BuX9GP8Qvw"
+    "gameName": "Orja",
+    "tagLine": "SL\u0391VE",
+    "puuid": "rxf0BgZ5ylYDULFcoxizkGjPjcYPGp8QmpTOt137kzf93RQ3dv8k1_FRyFS21bGtfQcxpmsUuvZmAQ"
   },
   {
     "ID": 59,
-    "gameName": "Fiixing mistakes",
-    "tagLine": "EIW",
-    "puuid": "qPCx2CdWWy9Zd65pPEOm_aX5mT3x7utrWvgf4uNWvyXIVbTG1B7-mS7qkziOPu9RxRPgefuHx5dk7A"
+    "gameName": "\u0141anz",
+    "tagLine": "EUW",
+    "puuid": "s49suvGNcVsa5fpDnh8wwLRgnC4Hud6eaVQurIVmloU0W8ZngJabpuxBlnM2Xcd6Xy_PHRyyFf_MEA"
   },
   {
     "ID": 60,
-    "gameName": "BLQT",
-    "tagLine": "EUW",
-    "puuid": "rhEbquJxLcpBVgCoHWxUYLc3Omt-czGX1q-IbtwRcj7oZeu7JDFrxp4KrwSabp6-RkoVqlh8Q-fg-Q"
+    "gameName": "Tortue G\u00e9niale",
+    "tagLine": "Kame",
+    "puuid": "sUhMTtS7Nku4YPgEKLhaB7LSqT0FWqjWMYwdhJIBTgtGTmjKv3tCD39PhgY-sY1dOxfS3HnI0DpY5g"
   },
   {
     "ID": 61,
-    "gameName": "Xeeo",
-    "tagLine": "213",
-    "puuid": "rhuoB9_VHfJBip4Pku1nfN5WWiON7z7T7kJpY48EedmLzdGMz5nhWutPC-dsDMxWHotdXrDhZ6aEWw"
+    "gameName": "\u4eba\u7c7b\u7684\u5931\u8d25",
+    "tagLine": "777",
+    "puuid": "spZNE1jvYUY437KBZb5A7B0V0LH_N7hP8nN4c4elsZkJdrWba9_QuKgYGDT7LUXJ1iar4c4mTRmNsw"
   },
   {
     "ID": 62,
-    "gameName": "V9 Bladeshow",
+    "gameName": "KINGMAG",
     "tagLine": "EUW",
-    "puuid": "tQFmZ1EVosKf6CAk4IMoLiABDh9B8VjvM_o67Qega5TMBomExiZJTNzkCx7aznOWMODm1033SwnJLg"
+    "puuid": "ss4x45tI9Zz44APkTCagS4EHTBi2NfUO-Wo9fke4vcwKAsoBC1SgHlvZehSwXdcCBdCDgMdeziuKwg"
   },
   {
     "ID": 63,
-    "gameName": "TWTV DETDERT",
-    "tagLine": "12MAJ",
-    "puuid": "tlKAACgNqp7weGLakTXF2OcJ_y-qFamjCEbtH-slUBe6XY8ck5_UxMcrIkm5W-hDjLpgNhEkWAvgLg"
+    "gameName": "THOSE WHO KNOW",
+    "tagLine": "911",
+    "puuid": "t1wLPAdlaN1kGqSczdNGQM0QSX6YCUcNeo-txsoRb0VDHEXbf4oinw5hpUCo3IG7HTFit6M3WLY6ew"
   },
   {
     "ID": 64,
-    "gameName": "saga",
-    "tagLine": "zeref",
-    "puuid": "v9hmKvmdKVOVhLNI1_GWEu2ZuqKrjp8D3w8QJ1FMOR9YLF8YC_UMuWt_c7eI9hF-SwuoN9zNY23O6Q"
+    "gameName": "Hitori Gotoh",
+    "tagLine": "eUwU",
+    "puuid": "uILrsk3ftOPRKgPwQh2Fx2_izi_Qyn5vym0mmkkPWi_nUqVdDWucTGpnA_d7OwOynr0A2BnqVDIkgQ"
   },
   {
     "ID": 65,
-    "gameName": "\u0391\u03a1\u0393\u039f\u03a3",
-    "tagLine": "EUW",
-    "puuid": "vyyB_iyce2tiFwrx3igZqved0NqK8rHhmIFhodEYbDqGTFSEbXUyHwf6c_t3yej11Vm3IeQlnB4Pbw"
+    "gameName": "Batuuu",
+    "tagLine": "1111",
+    "puuid": "uTuVARw64_m_oFZEKspHtqnWsQH6IzAVazJQLO0-uJhcdr0bxs4XBbQXw7l1YoNAXyLsEdSj2k_w3Q"
   },
   {
     "ID": 66,
-    "gameName": "Cypreis",
+    "gameName": "ratinh v2",
     "tagLine": "EUW",
-    "puuid": "whohrlcC-yiflkmrpI7HDfjfEL0mu59AjlhwtR9ZsfborWS6Q3nCSTYld420RDQ9FJhPL8ndVMtR-w"
+    "puuid": "uryABLzMjvLN6C_zaM5uKXJnMeQ8ISMR2BNXuDY3EpMnDfQCkViK3qaPHH3GlreXcSYynaPMaB_7Xw"
   },
   {
     "ID": 67,
-    "gameName": "shido lovell",
-    "tagLine": "966",
-    "puuid": "yZHx8w3011iRZyKiIG7vUt22TOm427Q_V1xS7dU-pB1ux80CWYw_YdQxWrr2NT4Sem5d8Lp2S5eGcA"
+    "gameName": "Heroic",
+    "tagLine": "Herc",
+    "puuid": "wZ4Q6ERa2AxwHBNGvMc69G67g_Zld5xWtXIqY7R8Zq2HlnaZYJP8eQmoxT7j1appIEXmFQVG6sZQeg"
   },
   {
     "ID": 68,
-    "gameName": "Toe Nail Lover",
-    "tagLine": "TOE",
-    "puuid": "ydntGtKjZdsfxJRnTDzWMBLyJ8j3gqMMZWc5dBVH0BuciUifwMJqsMmX4jgylHp-EVl2Q_r631ZifA"
+    "gameName": "moo deng",
+    "tagLine": "awawa",
+    "puuid": "x1VNMjGfekCCt3kY4vkmK5hlNMsU701WNDOICUzlwLRVR7d65dmFzvKwV86WwTXdem3qtcjxO9etYg"
   },
   {
     "ID": 69,
-    "gameName": "Spider from Temu",
-    "tagLine": "Ckili",
-    "puuid": "zcS8FBvfsTdK_az3nIhcKvAR104Gp4TDGpRbfXK_uuCbrUGf0x-xVhfQSjARD7QEaLRgzH5O6MOCWQ"
+    "gameName": "before collapse1",
+    "tagLine": "dog",
+    "puuid": "z-UJfqRZMo7SpS1PARIAZymIKUDPWx3mu-dxuLJ9camdKrMUQT_5opui9yadLf88SWy6aZn4Gp_8Qw"
   },
   {
     "ID": 70,
-    "gameName": "H3ad",
-    "tagLine": "EUW",
-    "puuid": "zhOTnj290jZKyhoDRATaFOWIkWp9T7NoI3dyLXXezHMTOsKOIHuEDqpkjly1wB-keIGLkeRDqkPKpg"
-  },
-  {
-    "ID": 71,
-    "gameName": "alienag22",
-    "tagLine": "EUW",
-    "puuid": "zt-uAQ-OASJSrmFfEpVvyQlifPvgVFjqaNIN4vhKUprsneY8u0dyQkX3ABJR0TExr2v3iGTG857FrA"
+    "gameName": "Rgz",
+    "tagLine": "Noxus",
+    "puuid": "zHGHa4Y_fC6_d0RVdqLk-GL2_noBkqG1lQY4L3IhlUTOg_NGQU5yv5Wl1gTwai5FQF6NCCFpaGMPmA"
   }
 ]
