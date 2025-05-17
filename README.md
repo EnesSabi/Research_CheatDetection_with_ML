@@ -41,6 +41,10 @@ This notebook will guide the step-by-step implementation of a federated learning
     - best Website OP.gg to find the best players
   - Retrieve recent match IDs
   - Download match details (participants, stats, timeline)
+- [ ] Use the Riot Live-Client API to:
+  - Track real-time in-game data 
+  - Extract live match snapshots
+  - Build tool to make extraction easier for players
 
 *First Goal: Create a JSON dataset from 10 to 50 matches for a few players (mostly friends first)*
 
