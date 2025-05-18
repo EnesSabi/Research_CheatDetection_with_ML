@@ -39,6 +39,8 @@ def tracking_loop(log_widget, status_label):
     while True:
         try:
             response = requests.get('https://127.0.0.1:2999/liveclientdata/allgamedata', verify=False)
+            if not running:
+                break
         except requests.exceptions.ConnectionError:
             msg = f"{datetime.datetime.now()} | Currently not in game"
             status_label.config(text="🕹️ Nicht im Spiel", bootstyle="warning")

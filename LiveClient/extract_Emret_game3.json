@@ -1,0 +1,983 @@
+[
+  {
+    "timestamp": 369.0091247558594,
+    "data": {
+      "activePlayer": {
+        "abilities": {
+          "E": {
+            "abilityLevel": 0,
+            "displayName": "Magical Journey",
+            "id": "BardE",
+            "rawDescription": "GeneratedTip_Spell_BardE_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardE_DisplayName"
+          },
+          "Passive": {
+            "displayName": "Traveler's Call",
+            "id": "BardPTooltip_D_nS",
+            "rawDescription": "GeneratedTip_Passive_BardPTooltip_D_nS_Description",
+            "rawDisplayName": "GeneratedTip_Passive_BardPTooltip_D_nS_DisplayName"
+          },
+          "Q": {
+            "abilityLevel": 0,
+            "displayName": "Cosmic Binding",
+            "id": "BardQ",
+            "rawDescription": "GeneratedTip_Spell_BardQ_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardQ_DisplayName"
+          },
+          "R": {
+            "abilityLevel": 0,
+            "displayName": "Tempered Fate",
+            "id": "BardR",
+            "rawDescription": "GeneratedTip_Spell_BardR_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardR_DisplayName"
+          },
+          "W": {
+            "abilityLevel": 0,
+            "displayName": "Caretaker's Shrine",
+            "id": "BardW",
+            "rawDescription": "GeneratedTip_Spell_BardW_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardW_DisplayName"
+          }
+        },
+        "championStats": {
+          "abilityHaste": 8.0,
+          "abilityPower": 9.0,
+          "armor": 34.0,
+          "armorPenetrationFlat": 0.0,
+          "armorPenetrationPercent": 1.0,
+          "attackDamage": 52.0,
+          "attackRange": 500.0,
+          "attackSpeed": 0.6579999923706055,
+          "bonusArmorPenetrationPercent": 1.0,
+          "bonusMagicPenetrationPercent": 1.0,
+          "critChance": 0.0,
+          "critDamage": 175.0,
+          "currentHealth": 790.0,
+          "healShieldPower": 0.0,
+          "healthRegenRate": 1.100000023841858,
+          "lifeSteal": 0.0,
+          "magicLethality": 0.0,
+          "magicPenetrationFlat": 0.0,
+          "magicPenetrationPercent": 1.0,
+          "magicResist": 30.0,
+          "maxHealth": 790.0,
+          "moveSpeed": 502.25,
+          "omnivamp": 0.0,
+          "physicalLethality": 0.0,
+          "physicalVamp": 0.0,
+          "resourceMax": 350.0,
+          "resourceRegenRate": 1.2000000476837158,
+          "resourceType": "MANA",
+          "resourceValue": 350.0,
+          "spellVamp": 0.0,
+          "tenacity": 5.0
+        },
+        "currentGold": 648.7603149414062,
+        "fullRunes": {
+          "generalRunes": [
+            {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            {
+              "displayName": "Cheap Shot",
+              "id": 8126,
+              "rawDescription": "perk_tooltip_CheapShot",
+              "rawDisplayName": "perk_displayname_CheapShot"
+            },
+            {
+              "displayName": "Grisly Mementos",
+              "id": 8140,
+              "rawDescription": "perk_tooltip_GrislyMementos",
+              "rawDisplayName": "perk_displayname_GrislyMementos"
+            },
+            {
+              "displayName": "Treasure Hunter",
+              "id": 8135,
+              "rawDescription": "perk_tooltip_TreasureHunter",
+              "rawDisplayName": "perk_displayname_TreasureHunter"
+            },
+            {
+              "displayName": "Manaflow Band",
+              "id": 8226,
+              "rawDescription": "perk_tooltip_8226",
+              "rawDisplayName": "perk_displayname_8226"
+            },
+            {
+              "displayName": "Transcendence",
+              "id": 8210,
+              "rawDescription": "perk_tooltip_Transcendence",
+              "rawDisplayName": "perk_displayname_Transcendence"
+            }
+          ],
+          "keystone": {
+            "displayName": "Electrocute",
+            "id": 8112,
+            "rawDescription": "perk_tooltip_Electrocute",
+            "rawDisplayName": "perk_displayname_Electrocute"
+          },
+          "primaryRuneTree": {
+            "displayName": "Domination",
+            "id": 8100,
+            "rawDescription": "perkstyle_tooltip_7200",
+            "rawDisplayName": "perkstyle_displayname_7200"
+          },
+          "secondaryRuneTree": {
+            "displayName": "Sorcery",
+            "id": 8200,
+            "rawDescription": "perkstyle_tooltip_7202",
+            "rawDisplayName": "perkstyle_displayname_7202"
+          },
+          "statRunes": [
+            {
+              "id": 5007,
+              "rawDescription": "perk_tooltip_StatModCooldownReductionScaling"
+            },
+            {
+              "id": 5008,
+              "rawDescription": "perk_tooltip_StatModAdaptive"
+            },
+            {
+              "id": 5001,
+              "rawDescription": "perk_tooltip_StatModHealthScaling"
+            }
+          ]
+        },
+        "level": 1,
+        "riotId": "Gl\u00f4ryToTheCCP#Ching",
+        "riotIdGameName": "Gl\u00f4ryToTheCCP",
+        "riotIdTagLine": "Ching",
+        "summonerName": "Gl\u00f4ryToTheCCP#Ching",
+        "teamRelativeColors": true
+      },
+      "allPlayers": [
+        {
+          "championName": "Bard",
+          "isBot": false,
+          "isDead": false,
+          "items": [
+            {
+              "canUse": false,
+              "consumable": false,
+              "count": 1,
+              "displayName": "Ruby Crystal",
+              "itemID": 1028,
+              "price": 400,
+              "rawDescription": "GeneratedTip_Item_1028_Description",
+              "rawDisplayName": "Item_1028_Name",
+              "slot": 0
+            }
+          ],
+          "level": 1,
+          "position": "",
+          "rawChampionName": "game_character_displayname_Bard",
+          "rawSkinName": "game_character_skin_displayname_Bard_0",
+          "respawnTimer": 0.0,
+          "riotId": "Gl\u00f4ryToTheCCP#Ching",
+          "riotIdGameName": "Gl\u00f4ryToTheCCP",
+          "riotIdTagLine": "Ching",
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Sorcery",
+              "id": 8200,
+              "rawDescription": "perkstyle_tooltip_7202",
+              "rawDisplayName": "perkstyle_displayname_7202"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0.0
+          },
+          "skinID": 0,
+          "skinName": "",
+          "summonerName": "Gl\u00f4ryToTheCCP#Ching",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Ignite",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Lillia",
+          "isBot": true,
+          "isDead": false,
+          "items": [
+            {
+              "canUse": false,
+              "consumable": false,
+              "count": 1,
+              "displayName": "Mosstomper Seedling",
+              "itemID": 1103,
+              "price": 450,
+              "rawDescription": "GeneratedTip_Item_1103_Description",
+              "rawDisplayName": "Item_1103_Name",
+              "slot": 0
+            },
+            {
+              "canUse": true,
+              "consumable": false,
+              "count": 1,
+              "displayName": "Stealth Ward",
+              "itemID": 3340,
+              "price": 0,
+              "rawDescription": "GeneratedTip_Item_3340_Description",
+              "rawDisplayName": "Item_3340_Name",
+              "slot": 6
+            }
+          ],
+          "level": 5,
+          "position": "JUNGLE",
+          "rawChampionName": "game_character_displayname_Lillia",
+          "rawSkinName": "game_character_skin_displayname_Lillia_0",
+          "respawnTimer": 0.0,
+          "riotId": "Lillia#BOT",
+          "riotIdGameName": "Lillia",
+          "riotIdTagLine": "BOT",
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 20,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 3.610349416732788
+          },
+          "skinID": 0,
+          "skinName": "",
+          "summonerName": "Lillia Bot",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Smite",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerSmite_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSmite_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        }
+      ],
+      "events": {
+        "Events": [
+          {
+            "EventID": 0,
+            "EventName": "GameStart",
+            "EventTime": 0.053684301674366
+          },
+          {
+            "EventID": 1,
+            "EventName": "MinionsSpawning",
+            "EventTime": 65.02703094482422
+          }
+        ]
+      },
+      "gameData": {
+        "gameMode": "CLASSIC",
+        "gameTime": 369.0091247558594,
+        "mapName": "Map11",
+        "mapNumber": 11,
+        "mapTerrain": "Default"
+      }
+    }
+  },
+  {
+    "timestamp": 374.2454833984375,
+    "data": {
+      "activePlayer": {
+        "abilities": {
+          "E": {
+            "abilityLevel": 0,
+            "displayName": "Magical Journey",
+            "id": "BardE",
+            "rawDescription": "GeneratedTip_Spell_BardE_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardE_DisplayName"
+          },
+          "Passive": {
+            "displayName": "Traveler's Call",
+            "id": "BardPTooltip_D_nS",
+            "rawDescription": "GeneratedTip_Passive_BardPTooltip_D_nS_Description",
+            "rawDisplayName": "GeneratedTip_Passive_BardPTooltip_D_nS_DisplayName"
+          },
+          "Q": {
+            "abilityLevel": 0,
+            "displayName": "Cosmic Binding",
+            "id": "BardQ",
+            "rawDescription": "GeneratedTip_Spell_BardQ_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardQ_DisplayName"
+          },
+          "R": {
+            "abilityLevel": 0,
+            "displayName": "Tempered Fate",
+            "id": "BardR",
+            "rawDescription": "GeneratedTip_Spell_BardR_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardR_DisplayName"
+          },
+          "W": {
+            "abilityLevel": 0,
+            "displayName": "Caretaker's Shrine",
+            "id": "BardW",
+            "rawDescription": "GeneratedTip_Spell_BardW_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardW_DisplayName"
+          }
+        },
+        "championStats": {
+          "abilityHaste": 8.0,
+          "abilityPower": 9.0,
+          "armor": 34.0,
+          "armorPenetrationFlat": 0.0,
+          "armorPenetrationPercent": 1.0,
+          "attackDamage": 52.0,
+          "attackRange": 500.0,
+          "attackSpeed": 0.6579999923706055,
+          "bonusArmorPenetrationPercent": 1.0,
+          "bonusMagicPenetrationPercent": 1.0,
+          "critChance": 0.0,
+          "critDamage": 175.0,
+          "currentHealth": 790.0,
+          "healShieldPower": 0.0,
+          "healthRegenRate": 1.100000023841858,
+          "lifeSteal": 0.0,
+          "magicLethality": 0.0,
+          "magicPenetrationFlat": 0.0,
+          "magicPenetrationPercent": 1.0,
+          "magicResist": 30.0,
+          "maxHealth": 790.0,
+          "moveSpeed": 502.25,
+          "omnivamp": 0.0,
+          "physicalLethality": 0.0,
+          "physicalVamp": 0.0,
+          "resourceMax": 350.0,
+          "resourceRegenRate": 1.2000000476837158,
+          "resourceType": "MANA",
+          "resourceValue": 350.0,
+          "spellVamp": 0.0,
+          "tenacity": 5.0
+        },
+        "currentGold": 659.9805297851562,
+        "fullRunes": {
+          "generalRunes": [
+            {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            {
+              "displayName": "Cheap Shot",
+              "id": 8126,
+              "rawDescription": "perk_tooltip_CheapShot",
+              "rawDisplayName": "perk_displayname_CheapShot"
+            },
+            {
+              "displayName": "Grisly Mementos",
+              "id": 8140,
+              "rawDescription": "perk_tooltip_GrislyMementos",
+              "rawDisplayName": "perk_displayname_GrislyMementos"
+            },
+            {
+              "displayName": "Treasure Hunter",
+              "id": 8135,
+              "rawDescription": "perk_tooltip_TreasureHunter",
+              "rawDisplayName": "perk_displayname_TreasureHunter"
+            },
+            {
+              "displayName": "Manaflow Band",
+              "id": 8226,
+              "rawDescription": "perk_tooltip_8226",
+              "rawDisplayName": "perk_displayname_8226"
+            },
+            {
+              "displayName": "Transcendence",
+              "id": 8210,
+              "rawDescription": "perk_tooltip_Transcendence",
+              "rawDisplayName": "perk_displayname_Transcendence"
+            }
+          ],
+          "keystone": {
+            "displayName": "Electrocute",
+            "id": 8112,
+            "rawDescription": "perk_tooltip_Electrocute",
+            "rawDisplayName": "perk_displayname_Electrocute"
+          },
+          "primaryRuneTree": {
+            "displayName": "Domination",
+            "id": 8100,
+            "rawDescription": "perkstyle_tooltip_7200",
+            "rawDisplayName": "perkstyle_displayname_7200"
+          },
+          "secondaryRuneTree": {
+            "displayName": "Sorcery",
+            "id": 8200,
+            "rawDescription": "perkstyle_tooltip_7202",
+            "rawDisplayName": "perkstyle_displayname_7202"
+          },
+          "statRunes": [
+            {
+              "id": 5007,
+              "rawDescription": "perk_tooltip_StatModCooldownReductionScaling"
+            },
+            {
+              "id": 5008,
+              "rawDescription": "perk_tooltip_StatModAdaptive"
+            },
+            {
+              "id": 5001,
+              "rawDescription": "perk_tooltip_StatModHealthScaling"
+            }
+          ]
+        },
+        "level": 1,
+        "riotId": "Gl\u00f4ryToTheCCP#Ching",
+        "riotIdGameName": "Gl\u00f4ryToTheCCP",
+        "riotIdTagLine": "Ching",
+        "summonerName": "Gl\u00f4ryToTheCCP#Ching",
+        "teamRelativeColors": true
+      },
+      "allPlayers": [
+        {
+          "championName": "Bard",
+          "isBot": false,
+          "isDead": false,
+          "items": [
+            {
+              "canUse": false,
+              "consumable": false,
+              "count": 1,
+              "displayName": "Ruby Crystal",
+              "itemID": 1028,
+              "price": 400,
+              "rawDescription": "GeneratedTip_Item_1028_Description",
+              "rawDisplayName": "Item_1028_Name",
+              "slot": 0
+            }
+          ],
+          "level": 1,
+          "position": "",
+          "rawChampionName": "game_character_displayname_Bard",
+          "rawSkinName": "game_character_skin_displayname_Bard_0",
+          "respawnTimer": 0.0,
+          "riotId": "Gl\u00f4ryToTheCCP#Ching",
+          "riotIdGameName": "Gl\u00f4ryToTheCCP",
+          "riotIdTagLine": "Ching",
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Sorcery",
+              "id": 8200,
+              "rawDescription": "perkstyle_tooltip_7202",
+              "rawDisplayName": "perkstyle_displayname_7202"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0.0
+          },
+          "skinID": 0,
+          "skinName": "",
+          "summonerName": "Gl\u00f4ryToTheCCP#Ching",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Ignite",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Lillia",
+          "isBot": true,
+          "isDead": false,
+          "items": [
+            {
+              "canUse": false,
+              "consumable": false,
+              "count": 1,
+              "displayName": "Mosstomper Seedling",
+              "itemID": 1103,
+              "price": 450,
+              "rawDescription": "GeneratedTip_Item_1103_Description",
+              "rawDisplayName": "Item_1103_Name",
+              "slot": 0
+            },
+            {
+              "canUse": true,
+              "consumable": false,
+              "count": 1,
+              "displayName": "Stealth Ward",
+              "itemID": 3340,
+              "price": 0,
+              "rawDescription": "GeneratedTip_Item_3340_Description",
+              "rawDisplayName": "Item_3340_Name",
+              "slot": 6
+            }
+          ],
+          "level": 5,
+          "position": "JUNGLE",
+          "rawChampionName": "game_character_displayname_Lillia",
+          "rawSkinName": "game_character_skin_displayname_Lillia_0",
+          "respawnTimer": 0.0,
+          "riotId": "Lillia#BOT",
+          "riotIdGameName": "Lillia",
+          "riotIdTagLine": "BOT",
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 20,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 3.610349416732788
+          },
+          "skinID": 0,
+          "skinName": "",
+          "summonerName": "Lillia Bot",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Smite",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerSmite_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSmite_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        }
+      ],
+      "events": {
+        "Events": [
+          {
+            "EventID": 0,
+            "EventName": "GameStart",
+            "EventTime": 0.053684301674366
+          },
+          {
+            "EventID": 1,
+            "EventName": "MinionsSpawning",
+            "EventTime": 65.02703094482422
+          }
+        ]
+      },
+      "gameData": {
+        "gameMode": "CLASSIC",
+        "gameTime": 374.2454833984375,
+        "mapName": "Map11",
+        "mapNumber": 11,
+        "mapTerrain": "Default"
+      }
+    }
+  },
+  {
+    "timestamp": 379.38641357421875,
+    "data": {
+      "activePlayer": {
+        "abilities": {
+          "E": {
+            "abilityLevel": 0,
+            "displayName": "Magical Journey",
+            "id": "BardE",
+            "rawDescription": "GeneratedTip_Spell_BardE_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardE_DisplayName"
+          },
+          "Passive": {
+            "displayName": "Traveler's Call",
+            "id": "BardPTooltip_D_nS",
+            "rawDescription": "GeneratedTip_Passive_BardPTooltip_D_nS_Description",
+            "rawDisplayName": "GeneratedTip_Passive_BardPTooltip_D_nS_DisplayName"
+          },
+          "Q": {
+            "abilityLevel": 0,
+            "displayName": "Cosmic Binding",
+            "id": "BardQ",
+            "rawDescription": "GeneratedTip_Spell_BardQ_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardQ_DisplayName"
+          },
+          "R": {
+            "abilityLevel": 0,
+            "displayName": "Tempered Fate",
+            "id": "BardR",
+            "rawDescription": "GeneratedTip_Spell_BardR_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardR_DisplayName"
+          },
+          "W": {
+            "abilityLevel": 0,
+            "displayName": "Caretaker's Shrine",
+            "id": "BardW",
+            "rawDescription": "GeneratedTip_Spell_BardW_Description",
+            "rawDisplayName": "GeneratedTip_Spell_BardW_DisplayName"
+          }
+        },
+        "championStats": {
+          "abilityHaste": 8.0,
+          "abilityPower": 9.0,
+          "armor": 34.0,
+          "armorPenetrationFlat": 0.0,
+          "armorPenetrationPercent": 1.0,
+          "attackDamage": 52.0,
+          "attackRange": 500.0,
+          "attackSpeed": 0.6579999923706055,
+          "bonusArmorPenetrationPercent": 1.0,
+          "bonusMagicPenetrationPercent": 1.0,
+          "critChance": 0.0,
+          "critDamage": 175.0,
+          "currentHealth": 790.0,
+          "healShieldPower": 0.0,
+          "healthRegenRate": 1.100000023841858,
+          "lifeSteal": 0.0,
+          "magicLethality": 0.0,
+          "magicPenetrationFlat": 0.0,
+          "magicPenetrationPercent": 1.0,
+          "magicResist": 30.0,
+          "maxHealth": 790.0,
+          "moveSpeed": 502.25,
+          "omnivamp": 0.0,
+          "physicalLethality": 0.0,
+          "physicalVamp": 0.0,
+          "resourceMax": 350.0,
+          "resourceRegenRate": 1.2000000476837158,
+          "resourceType": "MANA",
+          "resourceValue": 350.0,
+          "spellVamp": 0.0,
+          "tenacity": 5.0
+        },
+        "currentGold": 670.1807250976562,
+        "fullRunes": {
+          "generalRunes": [
+            {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            {
+              "displayName": "Cheap Shot",
+              "id": 8126,
+              "rawDescription": "perk_tooltip_CheapShot",
+              "rawDisplayName": "perk_displayname_CheapShot"
+            },
+            {
+              "displayName": "Grisly Mementos",
+              "id": 8140,
+              "rawDescription": "perk_tooltip_GrislyMementos",
+              "rawDisplayName": "perk_displayname_GrislyMementos"
+            },
+            {
+              "displayName": "Treasure Hunter",
+              "id": 8135,
+              "rawDescription": "perk_tooltip_TreasureHunter",
+              "rawDisplayName": "perk_displayname_TreasureHunter"
+            },
+            {
+              "displayName": "Manaflow Band",
+              "id": 8226,
+              "rawDescription": "perk_tooltip_8226",
+              "rawDisplayName": "perk_displayname_8226"
+            },
+            {
+              "displayName": "Transcendence",
+              "id": 8210,
+              "rawDescription": "perk_tooltip_Transcendence",
+              "rawDisplayName": "perk_displayname_Transcendence"
+            }
+          ],
+          "keystone": {
+            "displayName": "Electrocute",
+            "id": 8112,
+            "rawDescription": "perk_tooltip_Electrocute",
+            "rawDisplayName": "perk_displayname_Electrocute"
+          },
+          "primaryRuneTree": {
+            "displayName": "Domination",
+            "id": 8100,
+            "rawDescription": "perkstyle_tooltip_7200",
+            "rawDisplayName": "perkstyle_displayname_7200"
+          },
+          "secondaryRuneTree": {
+            "displayName": "Sorcery",
+            "id": 8200,
+            "rawDescription": "perkstyle_tooltip_7202",
+            "rawDisplayName": "perkstyle_displayname_7202"
+          },
+          "statRunes": [
+            {
+              "id": 5007,
+              "rawDescription": "perk_tooltip_StatModCooldownReductionScaling"
+            },
+            {
+              "id": 5008,
+              "rawDescription": "perk_tooltip_StatModAdaptive"
+            },
+            {
+              "id": 5001,
+              "rawDescription": "perk_tooltip_StatModHealthScaling"
+            }
+          ]
+        },
+        "level": 1,
+        "riotId": "Gl\u00f4ryToTheCCP#Ching",
+        "riotIdGameName": "Gl\u00f4ryToTheCCP",
+        "riotIdTagLine": "Ching",
+        "summonerName": "Gl\u00f4ryToTheCCP#Ching",
+        "teamRelativeColors": true
+      },
+      "allPlayers": [
+        {
+          "championName": "Bard",
+          "isBot": false,
+          "isDead": false,
+          "items": [
+            {
+              "canUse": false,
+              "consumable": false,
+              "count": 1,
+              "displayName": "Ruby Crystal",
+              "itemID": 1028,
+              "price": 400,
+              "rawDescription": "GeneratedTip_Item_1028_Description",
+              "rawDisplayName": "Item_1028_Name",
+              "slot": 0
+            }
+          ],
+          "level": 1,
+          "position": "",
+          "rawChampionName": "game_character_displayname_Bard",
+          "rawSkinName": "game_character_skin_displayname_Bard_0",
+          "respawnTimer": 0.0,
+          "riotId": "Gl\u00f4ryToTheCCP#Ching",
+          "riotIdGameName": "Gl\u00f4ryToTheCCP",
+          "riotIdTagLine": "Ching",
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Sorcery",
+              "id": 8200,
+              "rawDescription": "perkstyle_tooltip_7202",
+              "rawDisplayName": "perkstyle_displayname_7202"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0.0
+          },
+          "skinID": 0,
+          "skinName": "",
+          "summonerName": "Gl\u00f4ryToTheCCP#Ching",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Ignite",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Lillia",
+          "isBot": true,
+          "isDead": false,
+          "items": [
+            {
+              "canUse": false,
+              "consumable": false,
+              "count": 1,
+              "displayName": "Mosstomper Seedling",
+              "itemID": 1103,
+              "price": 450,
+              "rawDescription": "GeneratedTip_Item_1103_Description",
+              "rawDisplayName": "Item_1103_Name",
+              "slot": 0
+            },
+            {
+              "canUse": true,
+              "consumable": false,
+              "count": 1,
+              "displayName": "Stealth Ward",
+              "itemID": 3340,
+              "price": 0,
+              "rawDescription": "GeneratedTip_Item_3340_Description",
+              "rawDisplayName": "Item_3340_Name",
+              "slot": 6
+            }
+          ],
+          "level": 5,
+          "position": "JUNGLE",
+          "rawChampionName": "game_character_displayname_Lillia",
+          "rawSkinName": "game_character_skin_displayname_Lillia_0",
+          "respawnTimer": 0.0,
+          "riotId": "Lillia#BOT",
+          "riotIdGameName": "Lillia",
+          "riotIdTagLine": "BOT",
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 20,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 3.610349416732788
+          },
+          "skinID": 0,
+          "skinName": "",
+          "summonerName": "Lillia Bot",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Smite",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerSmite_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSmite_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        }
+      ],
+      "events": {
+        "Events": [
+          {
+            "EventID": 0,
+            "EventName": "GameStart",
+            "EventTime": 0.053684301674366
+          },
+          {
+            "EventID": 1,
+            "EventName": "MinionsSpawning",
+            "EventTime": 65.02703094482422
+          }
+        ]
+      },
+      "gameData": {
+        "gameMode": "CLASSIC",
+        "gameTime": 379.38641357421875,
+        "mapName": "Map11",
+        "mapNumber": 11,
+        "mapTerrain": "Default"
+      }
+    }
+  }
+]
