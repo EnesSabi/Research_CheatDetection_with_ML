@@ -30,3 +30,14 @@ cx freeze kommt nicht auf manche bibliotheken klar und pyinstaller spackt manchm
     dass er bei nicht gefunden games keine json Datei erstellt oder noch besser: Nur eine Json Datei erstellt, wenn 
     ein snapshot gemacht wurde
 
+# Emre 23.05.
+live game daten werden derzeit gesammelt. 
+Readme file wurde ergänzt mit infos über LiveClient
+13 Volle Summoners Rift games eingefügt (Json files) --> manche waren auch mit ff (generell: 0,5 MB pro Spielminute)
+Ersten dataframe erstellt, sortiert nach Gametime und Game --> Gametime == timestamp leider, also nicht wirklich eine "Sekunde 0" möglich
+Beim Dataframe Probleme: - glob findet nur bis game9, da single digit integer
+                         - summonerName gibt KeyError
+Dataframe Probleme wurden gelöst --> Da die snapshots bereits im Ladescreen starten, viele NaN Values
+
+
+

@@ -42,11 +42,16 @@ This notebook will guide the step-by-step implementation of a federated learning
   - Retrieve recent match IDs
   - Download match details (participants, stats, timeline)
 - [ ] Use the Riot Live-Client API to:
-  - Track real-time in-game data 
-  - Extract live match snapshots
-  - Build tool to make extraction easier for players
+  - Track real-time in-game data during active matches
+  - Extract live match snapshots (every 5 seconds)
+  - Automatically generate match-specific JSON logs for each user
+  - Build and distribute a `.exe` GUI tool that runs on any Windows system
+    - Create an `.exe` file using the command *pyinstaller --noconsole --onefile program_live.py* in the virutal environment terminal
+      - This ensures that no console is visible and that all imports are included in the `.exe` file
+    - Users can start/stop live extraction via graphical interface
+    - Snapshots are stored locally and optionally uploaded to a central server for aggregation
 
-*First Goal: Create a JSON dataset from 10 to 50 matches for a few players (mostly friends first)*
+*Current Goal: Create a JSON dataset with 10–50 full matches from real players (friends first) to build the baseline for model development.*
 
 ---
 
