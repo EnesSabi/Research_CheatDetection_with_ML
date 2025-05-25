@@ -5,7 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv_312_CD_ML" />
       <excludeFolder url="file://$MODULE_DIR$/.venv_313_CD_ML" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12 (Research_CheatDetection_with_ML)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.13 (Research_CheatDetection_with_ML)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

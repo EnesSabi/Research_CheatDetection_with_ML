@@ -125,24 +125,24 @@ Structure for presentation:
 
 # Routing Values
 
-| Platform | Host                   | Region  |
-| --- |------------------------|---------|
-| BR1 | br1.api.riotgames.com  | Brazil |
-| EUN1 | eun1.api.riotgames.com | Europe Nordic & East |
-| EUW1 | euw1.api.riotgames.com | Europe West |
-| JP1 | jp1.api.riotgames.com  | Japan | 
-| KR | kr.api.riotgames.com   | Korea |
-| LA1 | la1.api.riotgames.com  | Latin America North |
-| LA2 | la2.api.riotgames.com  | Lation America South |
-| NA1 | na1.api.riotgames.com  | North America |
-| OC1 | oc1.api.riotgames.com  | Oceania |
-| TR1 | tr1.api.riotgames.com  | Turkiye |
-| RU | ru.api.riotgames.com   | Russia |
-| PH2 | ph2.api.riotgames.com  | Philippines |
-| SG2 | sg2.api.riotgames.com  | Singapore |
-| TH2 | th2.api.riotgames.com  | Thailand |
-| TW2 | tw2.api.riotgames.com  | Taiwan, HongKong, Macao |
-| VN2 | vn2.api.riotgames.com  | Vietnam |
+| Platform | Host                   | Region                  |
+|----------|------------------------|-------------------------|
+| BR1      | br1.api.riotgames.com  | Brazil                  |
+| EUN1     | eun1.api.riotgames.com | Europe Nordic & East    |
+| EUW1     | euw1.api.riotgames.com | Europe West             |
+| JP1      | jp1.api.riotgames.com  | Japan                   | 
+| KR       | kr.api.riotgames.com   | Korea                   |
+| LA1      | la1.api.riotgames.com  | Latin America North     |
+| LA2      | la2.api.riotgames.com  | Latin America South     |
+| NA1      | na1.api.riotgames.com  | North America           |
+| OC1      | oc1.api.riotgames.com  | Oceania                 |
+| TR1      | tr1.api.riotgames.com  | Turkiye                 |
+| RU       | ru.api.riotgames.com   | Russia                  |
+| PH2      | ph2.api.riotgames.com  | Philippines             |
+| SG2      | sg2.api.riotgames.com  | Singapore               |
+| TH2      | th2.api.riotgames.com  | Thailand                |
+| TW2      | tw2.api.riotgames.com  | Taiwan, HongKong, Macao |
+| VN2      | vn2.api.riotgames.com  | Vietnam                 |
 
 ---
 
@@ -150,13 +150,26 @@ Structure for presentation:
 Research Proposal:
 Title: Federated Learning for Cheat Detection in Online Games: Adaptive Model Fusion Based on League of Legends Player Behavior
 
-Cheating in competitive online games such as League of Legends poses a significant threat to fair play and undermines e-sports integrity. This project investigates how federated learning (FL) can enable distributed cheat detection without compromising player privacy. The proposed approach is inspired by the FedFusion approach fraud detection, the goal of which is to implement adaptive model fusion to behavioural gameplay data.
+Cheating in competitive online games such as League of Legends poses a significant threat to fair play and undermines e-sports integrity. 
+This project investigates how federated learning (FL) can enable distributed cheat detection without compromising player privacy. 
+The proposed approach is inspired by the FedFusion approach fraud detection, the goal of which is to implement adaptive model fusion to behavioural gameplay data.
 
-The proposed model conceptualises each game server as a federated client that trains its own classifier based on features such as APM, spell usage, and movement timing. These features are extracted via the Riot Games API. The presence of gameplay variations across servers can result in discrepancies in features, which are addressed through the implementation of adaptive fusion techniques.
+The proposed model conceptualizes each game server as a federated client 
+that trains its own classifier based on features such as APM, 
+spell usage, and movement timing. 
+These features are extracted via the Riot Games API. 
+The presence of gameplay variations across servers can result in discrepancies in features, 
+which are addressed through the implementation of adaptive fusion techniques.
 
-The architecture includes an adjustable fusion parameter (α) to achieve a balance local and global learning. Optional extensions involve the implementation of reinforcement learning for α-optimization, as proposed in the FedFusion paper, and visualization tools like t-SNE and SHAP to detect patterns and explain decisions.
+The architecture includes an adjustable fusion parameter (α) to achieve a balance local and global learning. 
+Optional extensions involve the implementation of reinforcement learning for α-optimization, 
+as proposed in the FedFusion paper, 
+and visualization tools like t-SNE and SHAP to detect patterns and explain decisions.
 
-The project's objective is threefold: firstly, to evaluate the method's accuracy, robustness, and generalizability to other games in League of Legends; secondly, to consider the ethical, legal, and privacy implications (e.g., GDPR); and thirdly, to explore the potential for extending the method to other games. The project's overarching objective is to explore scalable and privacy-preserving approaches to cheat detection in modern online games.
+The project's objective is threefold: firstly, to evaluate the method's accuracy, robustness, 
+and generalizability to other games in League of Legends; secondly, to consider the ethical, legal, and privacy implications (e.g., GDPR); 
+and thirdly, to explore the potential for extending the method to other games. 
+The project's overarching objective is to explore scalable and privacy-preserving approaches to cheat detection in modern online games.
 
 ---
 

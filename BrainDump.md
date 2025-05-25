@@ -20,6 +20,15 @@ program_live.py debugging (Stopp Knopf hat nicht funktioniert wenn man In-Game i
 Übearbeiten von jupyter notebook datei program_live
 Versuchen eine exe zu erstellen mit CX Freeze (anstatt PyInstaller) --> Funktioniert immernoch nicht [setup.py ist für CX Freeze damit er ein build machen kann]
 
+# Enes 19.05
+- Fokus auf Machine Learning detectable
+- Visible Cheats should be the first task
+- Improve Precision and minimize False Positives
+- Do Client-Side heuristics for the Events
+- Main Focus on Scripting Vectors and the predictions of Auto Cancel, Kites and Evade Scripts
+- Start the Work with the Live-Data and then implement the Rest.
+- Asap v1.0 to distribute and update later with other features.
+
 # Emre 19.05. 
 exe ist erstellt, Json files werden im dist Ordner gespeichert (Ka ob problematisch oder ob es besser geht)
 exe wurde mit pyinstaller erstellt mit pyinstaller --noconsole --onefile program_live.py
