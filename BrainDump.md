@@ -39,5 +39,17 @@ Beim Dataframe Probleme: - glob findet nur bis game9, da single digit integer
                          - summonerName gibt KeyError
 Dataframe Probleme wurden gelöst --> Da die snapshots bereits im Ladescreen starten, viele NaN Values
 
+# Emre 25.05. 
+Weiter am Dataframe gearbeitet.
+    - Score-Daten von allPlayers eingefügt (davor nur Infos über activePlayer im DF)
+    - Erste Filter angewandet, damit Ladescreen snapshots ausgefiltert werden
+
+    # TODO: 
+    -Es wurden bewusst NaN Datenpunkte eingefügt, da über andere Player keine active-Daten (gold etc.)vorhanden sind 
+        --> Problem: Was ist wenn da noch natürliche NaN Daten sind, also nicht bewusste?
+    -Bei allPlayers wird eine Liste erstellt namens items. Diese items haben auch ein price was dort steht
+        --> Schätzen wie viel Gold ein Spieler hat (durch Minions, kills, bounty, assist, wards, naturliche goldgenerierung)
+        --> Oder einfach zählen was seine Items kosten --> Das ist sein Gold (einfacher, aber ungenau)
+
 
 
