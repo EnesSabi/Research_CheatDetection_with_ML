@@ -60,5 +60,8 @@ Weiter am Dataframe gearbeitet.
         --> Schätzen wie viel Gold ein Spieler hat (durch Minions, kills, bounty, assist, wards, naturliche goldgenerierung)
         --> Oder einfach zählen was seine Items kosten --> Das ist sein Gold (einfacher, aber ungenau)
 
-
+# Enes 25.05.
+1. Mathematische Formel für Goldproduktion des aktiven Spielers (siehe Vorschlag Emre 25.05. --> Schätzung), Vergleich zu Item-prices
+2. Json files names über matchid speichern, und effizienteres Json-Abfragen (nicht mehrmals das gleiche extrahieren --> z.B. Runen)
+3. Feature Selection Vorbereitung --> welche Daten sind wichtig? 
 
