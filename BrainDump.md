@@ -65,3 +65,4 @@ Weiter am Dataframe gearbeitet.
 2. Json files names über matchid speichern, und effizienteres Json-Abfragen (nicht mehrmals das gleiche extrahieren --> z.B. Runen)
 3. Feature Selection Vorbereitung --> welche Daten sind wichtig? 
 
+Conclusion --> Focus on catching cheaters after the game (must not be live) --> Allows Usage of GameClient stats
