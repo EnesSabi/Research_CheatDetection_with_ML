@@ -57,7 +57,7 @@ print(f"Retrieved {len(match_data)} matches for {account['gameName']}\n")
 
 print(all_matches)
 
-with open('all_matches.json', 'w') as file:
+with open('../JSONS/all_matches.json', 'w') as file:
     json.dump(all_matches, file, indent=2)
 
 with open('participants.json', 'w') as file:
