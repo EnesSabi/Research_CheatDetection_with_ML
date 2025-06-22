@@ -32,7 +32,7 @@ def riot_api_request(func, *args, max_retries=3, sleep=2, **kwargs):
             print(f"[Retry {attempt}/{max_retries}] Fehler: {e}")
             if attempt == max_retries:
                 raise
-            time.sleep(sleep * attempt)  # Exponentiell steigende Pause
+            time.sleep(sleep)
 
 def read_summoner_list(summoners_txt: str) -> List[List[str]]:
     """Reads summoner names from file and returns a list of [gameName, tagLine]."""
@@ -65,10 +65,10 @@ def fetch_and_save_matches(accounts: List[Dict[str, Any]], match_id_list: List[L
 
     for account, match_ids in zip(accounts, match_id_list):
         match_data = []
-        for match_id in match_ids:
+        for match_id in match_ids: # potenziell Langwierig
             match = riot_api_request(lol_watcher.match.by_id, platform, match_id)
             match_data.append(match)
-            time.sleep(1.5)  # Respect Riot API rate limits
+            # time.sleep(1.2)  # Respect Riot API rate limits
         all_matches[account['gameName']] = match_data
         print(f"Retrieved {len(match_data)} matches for {account['gameName']}")
 
@@ -116,7 +116,7 @@ def enrich_participant_ranks(matches_json: str):
                             "rank": None,
                             "leaguePoints": 0
                         })
-                    time.sleep(0.5)
+                    #time.sleep(0.5)
                 except Exception as e:
                     print(f"Fehler bei {participant.get('summonerName', '??')}: {e}")
                     participant.update({
@@ -145,7 +145,7 @@ def fetch_account_data_for_participants(participants_json_path: str, output_json
                 "tagLine": account.get("tagLine"),
                 "puuid": puuid
             })
-            time.sleep(1.2)
+            #time.sleep(1.2)
         except Exception as e:
             results.append({
                 "ID": idx,
@@ -168,7 +168,7 @@ def test_summoner_list(summoners_txt: str):
             parts = [part.strip() for part in name.split('#')]
             split_summoner_list.append(parts)
         else:
-            split_summoner_list.append([nme])
+            split_summoner_list.append([name])
     print(split_summoner_list)
     return
 

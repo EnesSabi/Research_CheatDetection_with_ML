@@ -1,150 +1,155 @@
 # IMPORTS
 from riotwatcher import LolWatcher, ApiError, RiotWatcher
 from dotenv import load_dotenv
-
 import json
 import pandas as pd
 import time
 import os
+from tqdm import tqdm  # Progress bars
+from typing import List, Dict, Any
 
-# VARIABLES
-
+# Load environment variables
 load_dotenv()
-
 api_key = os.getenv("RIOT_API_KEY")
 region = os.getenv("REGION")
 platform = os.getenv("PLATFORM")
 
+# RiotWatcher Setup
 lol_watcher = LolWatcher(api_key)
 riot_watcher = RiotWatcher(api_key)
 
-all_matches = {}
-match_data = []
-summoner_list = []
-results = []
-accounts = []
-match_id_list = []
-
-# PARAMETER
+# File paths
 summoners_txt = 'summoners_euw.txt'
 all_matches_json = '../JSONS/all_matches.json'
-participants_json = 'participants.json'
-puuid_json = 'puuid_accounts.json'
+participants_json = '../JSONS/participants.json'
+puuid_json = '../JSONS/puuid_accounts.json'
 
+# ----------- NEU: Generic Retry-Wrapper für alle API-Requests -----------
+def riot_api_request(func, *args, **kwargs):
+    while True:
+        try:
+            return func(region, *args, **kwargs)
+        except ApiError as e:
+            if e.response.status_code == 429:
+                retry_after = int(e.response.headers.get("Retry-After", 90))
+                tqdm.write(f"Rate limit hit. Sleeping for {retry_after} seconds...")
+                time.sleep(retry_after)
+            else:
+                raise
 
-def read_summoner_list():
+def read_summoner_list(summoners_txt: str) -> List[List[str]]:
+    """Reads summoner names from file and returns a list of [gameName, tagLine]."""
+    summoner_list = []
     with open(summoners_txt, 'r') as file:
-        summoner_names = file.readlines()
+        for line in file:
+            name = line.strip().strip("#")
+            if '#' in name:
+                parts = [part.strip() for part in name.split('#')]
+                summoner_list.append(parts)
+            else:
+                summoner_list.append([name])
+    return summoner_list
 
-    for names in summoner_names:
-        user_name = names.strip("#")
-        summoner_list.append(user_name)
-
-    split_summoner_list = []
-    for item in summoner_list:
-        if '#' in item:
-            parts = item.split('#')
-            split_parts = [part.strip() for part in parts]
-            split_summoner_list.append(split_parts)
-        else:
-            split_summoner_list.append([item.strip()])
-
-    for summoners in range(len(split_summoner_list)):
-        account = riot_watcher.account.by_riot_id(platform, split_summoner_list[summoners][0], split_summoner_list[summoners][1])
+def fetch_accounts_and_matchids(summoner_infos: List[List[str]]) -> (List[Dict[str, Any]], List[List[str]]):
+    """Fetches account info and recent match ids for each summoner."""
+    accounts = []
+    match_id_list = []
+    for info in tqdm(summoner_infos, desc='Fetching accounts & match IDs'):
+        account = riot_api_request(riot_watcher.account.by_riot_id, platform, info[0], info[1]) # 1000 Req every Minute
         accounts.append(account)
-        match_ids = lol_watcher.match.matchlist_by_puuid(platform, account['puuid'], count=1)
+        match_ids = riot_api_request(lol_watcher.match.matchlist_by_puuid, platform, account['puuid'], count=1) # 2000 Req/10 Sec
         match_id_list.append(match_ids)
+    return accounts, match_id_list
 
-    print(accounts)
+def fetch_and_save_matches(accounts: List[Dict[str, Any]], match_id_list: List[List[str]], out_json: str, participants_json: str):
+    """Fetches match data for all accounts and saves to json files."""
+    all_matches = {}
+    all_participants = set()
 
-def summoner_to_json():
-    for account, match_ids in zip(accounts, match_id_list):
+    for account, match_ids in tqdm(zip(accounts, match_id_list), desc='Fetching match data', total=len(accounts)):
         match_data = []
-
-        for match_id in match_ids:
-            match = lol_watcher.match.by_id(platform, match_id)
+        for match_id in match_ids: # potenziell Langwierig
+            match = riot_api_request(lol_watcher.match.by_id, platform, match_id) # 2000 Req/10 Sec
             match_data.append(match)
-            time.sleep(1.5)
-
+            # time.sleep(1.2)  # Respect Riot API rate limits
         all_matches[account['gameName']] = match_data
-        print(f"Retrieved {len(match_data)} matches for {account['gameName']}\n")
+        # print(f"Retrieved {len(match_data)} matches for {account['gameName']}")  # Entfernt, ersetzt durch Ladebalken
 
-    print(all_matches)
+        # Participants extraction
+        if match_data:
+            participants = match_data[0]['metadata']['participants']
+            all_participants.update(participants)
 
-    with open(all_matches_json, 'w') as file:
+    # Save matches and participants
+    with open(out_json, 'w') as file:
         json.dump(all_matches, file, indent=2)
-
-    all_participants = []
-
-    for summoner, matches in all_matches.items():
-        if matches:
-            participants = matches[0]['metadata']['participants']
-            all_participants.extend(participants)
-
-    # Delete duplicates
-    all_participants = list(set(all_participants))
-
     with open(participants_json, 'w') as file:
-        json.dump(all_participants, file, indent=2)
+        json.dump(list(all_participants), file, indent=2)
 
-def rank_tier_extraction():
-    with open(all_matches_json, "r") as file:
+def enrich_participant_ranks(matches_json: str):
+    """Enriches each participant in all matches with solo queue rank info."""
+    with open(matches_json, "r") as file:
         all_matches = json.load(file)
 
-    for match_list in all_matches.values():
+    for match_list in tqdm(all_matches.values(), desc='Enriching matches', position=0):
         for match in match_list:
-            for participant in match["info"]["participants"]:
+            for participant in tqdm(match["info"]["participants"], desc='Participant Ranks', leave=False, position=1):
                 puu_id = participant.get("puuid")
+                if not puu_id:
+                    continue
+                try:
+                    summoner_data = riot_api_request(lol_watcher.summoner.by_puuid, "euw1", puu_id) # 1600 requests per Minute
+                    time.sleep(0.05)
+                    summoner_id = summoner_data["id"]
+                    rank_entries = riot_api_request(lol_watcher.league.by_summoner, "euw1", summoner_id) # 100 requests per Minute
+                    time.sleep(0.65)
+                    solo_rank = next((entry for entry in rank_entries if entry["queueType"] == "RANKED_SOLO_5x5"), None)
+                    if solo_rank:
+                        participant.update({
+                            "tier": solo_rank["tier"],
+                            "rank": solo_rank["rank"],
+                            "leaguePoints": solo_rank["leaguePoints"],
+                            "hotStreak": solo_rank["hotStreak"],
+                            "veteran": solo_rank["veteran"],
+                            "freshBlood": solo_rank["freshBlood"],
+                            "wins": solo_rank["wins"],
+                            "losses": solo_rank["losses"]
+                        })
+                    else:
+                        participant.update({
+                            "tier": "UNRANKED",
+                            "rank": None,
+                            "leaguePoints": 0
+                        })
+                except Exception as e:
+                    print(f"Fehler bei {participant.get('summonerName', '??')}: {e}")
+                    participant.update({
+                        "tier": "ERROR",
+                        "rank": None,
+                        "leaguePoints": None
+                    })
 
-                if puu_id:
-                    try:
-                        summoner_data = lol_watcher.summoner.by_puuid("euw1", puu_id)
-                        summoner_id = summoner_data["id"]
-
-                        rank_entries = lol_watcher.league.by_summoner("euw1", summoner_id)
-                        solo_rank = next((entry for entry in rank_entries if entry["queueType"] == "RANKED_SOLO_5x5"), None)
-
-                        if solo_rank:
-                            participant["tier"] = solo_rank["tier"]
-                            participant["rank"] = solo_rank["rank"]
-                            participant["leaguePoints"] = solo_rank["leaguePoints"]
-                            participant["hotStreak"] = solo_rank["hotStreak"]
-                            participant["veteran"] = solo_rank["veteran"]
-                            participant["freshBlood"] = solo_rank["freshBlood"]
-                            participant["wins"] = solo_rank["wins"]
-                            participant["losses"] = solo_rank["losses"]
-                        else:
-                            participant["tier"] = "UNRANKED"
-                            participant["rank"] = None
-                            participant["leaguePoints"] = 0
-
-                        time.sleep(0.5)
-
-                    except Exception as e:
-                        print(f"Fehler bei {participant.get('summonerName', '??')}: {e}")
-                        participant["tier"] = "ERROR"
-                        participant["rank"] = None
-                        participant["leaguePoints"] = None
-
-    with open(all_matches_json, "w") as file:
+    with open(matches_json, "w") as file:
         json.dump(all_matches, file, indent=2)
 
-def fetching_more_accounts():
-    with open(participants_json, 'r') as file:
-        summoner_idx = json.load(file)
+def fetch_account_data_for_participants(participants_json_path: str, output_json_path: str):
+    """Fetches account info for participants and saves as JSON."""
+    with open(participants_json_path, 'r') as file:
+        puuid_list = json.load(file)
 
-    summoner_idx = sorted(set(p for p in summoner_idx if isinstance(p, str) and len(p) > 20))
+    puuid_list = sorted(set(p for p in puuid_list if isinstance(p, str) and len(p) > 20))
+    results = []
 
-    for idx, puuid in enumerate(summoner_idx, 1): #enumerate is just für a counter for us to know how many summoners we have
+    for idx, puuid in tqdm(enumerate(puuid_list, 1), total=len(puuid_list), desc='Fetching participant accounts'):
         try:
-            account = riot_watcher.account.by_puuid(platform, puuid)
+            account = riot_api_request(riot_watcher.account.by_puuid, platform, puuid) # 20000 req/10 min
             results.append({
                 "ID": idx,
                 "gameName": account.get("gameName"),
                 "tagLine": account.get("tagLine"),
                 "puuid": puuid
             })
-            time.sleep(1.2)  # Respect Riot API rate limits
+            #time.sleep(1.2)
         except Exception as e:
             results.append({
                 "ID": idx,
@@ -152,33 +157,30 @@ def fetching_more_accounts():
                 "puuid": puuid
             })
 
-    with open(puuid_json, "w", encoding="utf-8") as f:
+    with open(output_json_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
 
-    # TODO: Find out what these "weird" values mean in some entries in puuid_accounts.json and sort them out if necessary --> These are non latin letters like ü or korean. We can just work with them.
-
-def test():
+def test_summoner_list(summoners_txt: str):
     with open(summoners_txt, 'r') as file:
         summoner_names = file.readlines()
 
-    for names in summoner_names:
-        user_name = names.strip("#")
-        summoner_list.append(user_name)
-
     split_summoner_list = []
-    for item in summoner_list:
-        if '#' in item:
-            parts = item.split('#')
-            split_parts = [part.strip() for part in parts]
-            split_summoner_list.append(split_parts)
+    for name in summoner_names:
+        name = name.strip().strip("#")
+        if '#' in name:
+            parts = [part.strip() for part in name.split('#')]
+            split_summoner_list.append(parts)
         else:
-            split_summoner_list.append([item.strip()])
-
+            split_summoner_list.append([name])
     print(split_summoner_list)
     return
 
 if __name__ == "__main__":
-    read_summoner_list()
-    summoner_to_json()
-    rank_tier_extraction()
-    fetching_more_accounts()
+    #summoner_infos = read_summoner_list(summoners_txt)
+    #accounts, match_id_list = fetch_accounts_and_matchids(summoner_infos) # 8:10 Min mit 2.34s/it - Pause bei 50er --> 1000 Req/Min Grenze
+    #fetch_and_save_matches(accounts, match_id_list, all_matches_json, participants_json) # 4:09 Min mit 1.19s/it - Pause bei 80er --> 1000 Req/Min Grenze
+    enrich_participant_ranks(all_matches_json) # 1:24:47 mit 1.84it/s --> 30 sekunden Run mit 1Min30Sec
+    fetch_account_data_for_participants(participants_json, puuid_json) # 38:29 mit 1.19s/it --> 20000 Req / 10 Minuten
+    #12:19
+    #1:37:06
+    #2:15:35
