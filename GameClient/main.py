@@ -25,16 +25,13 @@ participants_json = '../JSONS/participants.json'
 puuid_json = '../JSONS/puuid_accounts.json'
 
 # ----------- NEU: Generic Retry-Wrapper für alle API-Requests -----------
-def riot_api_request(func, *args, **kwargs):
-    while True:
+def riot_api_request(func, *args, max_retries=3, **kwargs):
+    for attempt in range(1, max_retries+1):
         try:
-            return func(region, *args, **kwargs)
-        except ApiError as e:
-            if e.response.status_code == 429:
-                retry_after = int(e.response.headers.get("Retry-After", 90))
-                tqdm.write(f"Rate limit hit. Sleeping for {retry_after} seconds...")
-                time.sleep(retry_after)
-            else:
+            return func(*args, **kwargs)
+        except Exception as e:
+            print(f"[Retry {attempt}/{max_retries}] Fehler: {e}")
+            if attempt == max_retries:
                 raise
 
 def read_summoner_list(summoners_txt: str) -> List[List[str]]:
@@ -93,16 +90,16 @@ def enrich_participant_ranks(matches_json: str):
 
     for match_list in tqdm(all_matches.values(), desc='Enriching matches', position=0):
         for match in match_list:
-            for participant in tqdm(match["info"]["participants"], desc='Participant Ranks', leave=False, position=1):
+            for participant in match["info"]["participants"]: #tqdm( __, desc='Participant Ranks', leave=False, position=1)
                 puu_id = participant.get("puuid")
                 if not puu_id:
                     continue
                 try:
                     summoner_data = riot_api_request(lol_watcher.summoner.by_puuid, "euw1", puu_id) # 1600 requests per Minute
-                    time.sleep(0.05)
+                    time.sleep(0.1)
                     summoner_id = summoner_data["id"]
                     rank_entries = riot_api_request(lol_watcher.league.by_summoner, "euw1", summoner_id) # 100 requests per Minute
-                    time.sleep(0.65)
+                    time.sleep(0.9)
                     solo_rank = next((entry for entry in rank_entries if entry["queueType"] == "RANKED_SOLO_5x5"), None)
                     if solo_rank:
                         participant.update({
@@ -121,6 +118,7 @@ def enrich_participant_ranks(matches_json: str):
                             "rank": None,
                             "leaguePoints": 0
                         })
+                    #time.sleep(0.5)
                 except Exception as e:
                     print(f"Fehler bei {participant.get('summonerName', '??')}: {e}")
                     participant.update({
