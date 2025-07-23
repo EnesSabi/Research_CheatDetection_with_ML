@@ -137,7 +137,7 @@ def test_summoner_list(summoners_txt: str):
 if __name__ == "__main__":
     summoner_infos = read_summoner_list(summoners_txt)
     accounts, match_id_list = fetch_accounts_and_matchids(summoner_infos) # 8:10 Min mit 2.34s/it - Pause bei 50er --> 1000 Req/Min Grenze
-    fetch_and_save_matches(accounts, match_id_list, all_matches_json, participants_json) # 4:09 Min mit 1.19s/it - Pause bei 80er --> 1000 Req/Min Grenze
+    fetch_and_save_matches(accounts, match_id_list, all_matches_json) # 4:09 Min mit 1.19s/it - Pause bei 80er --> 1000 Req/Min Grenze
     enrich_participant_ranks(all_matches_json) # 1:24:47 mit 1.84it/s --> 30 sekunden Run mit 1Min30Sec
     #12:19
     #1:37:06
