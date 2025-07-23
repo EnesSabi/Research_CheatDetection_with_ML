@@ -2,7 +2,6 @@
 from riotwatcher import LolWatcher, ApiError, RiotWatcher
 from dotenv import load_dotenv
 import json
-import pandas as pd
 import time
 import os
 from tqdm import tqdm  # Progress bars
@@ -35,7 +34,7 @@ def riot_api_request(func, *args, max_retries=3, **kwargs):
 def read_summoner_list(summoners_txt: str) -> List[List[str]]:
     """Reads summoner names from file and returns a list of [gameName, tagLine]."""
     summoner_list = []
-    with open(summoners_txt, 'r') as file:
+    with open(summoners_txt, 'r', encoding = 'utf-8') as file:
         for line in file:
             name = line.strip().strip("#")
             if '#' in name:
