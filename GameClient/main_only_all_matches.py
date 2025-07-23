@@ -45,14 +45,51 @@ def read_summoner_list(summoners_txt: str) -> List[List[str]]:
     return summoner_list
 
 def fetch_accounts_and_matchids(summoner_infos: List[List[str]]) -> (List[Dict[str, Any]], List[List[str]]):
-    """Fetches account info and recent match ids for each summoner."""
     accounts = []
     match_id_list = []
+
     for info in tqdm(summoner_infos, desc='Fetching accounts & match IDs'):
-        account = riot_api_request(riot_watcher.account.by_riot_id, platform, info[0], info[1]) # 1000 Req every Minute
-        accounts.append(account)
-        match_ids = riot_api_request(lol_watcher.match.matchlist_by_puuid, platform, account['puuid'], count=1) # 2000 Req/10 Sec
-        match_id_list.append(match_ids)
+        try:
+            # Does playername and tag exist?
+            if len(info) < 2:
+                print(f"Überspringe fehlerhaften Eintrag (falsches Format): {info}")
+                continue
+
+            # get Account Data
+            account = riot_api_request(
+                riot_watcher.account.by_riot_id,
+                platform,
+                info[0],
+                info[1]
+            )                                               # 1000 Req every Minute
+
+            # If Account is empty --> skip
+            if not account or "puuid" not in account:
+                print(f"Keine Daten gefunden für: {info}")
+                continue
+
+            # get Match-IDs
+            match_ids = riot_api_request(
+                lol_watcher.match.matchlist_by_puuid,
+                platform,
+                account['puuid'],
+                count=1
+            )                                               # 2000 Req/10 Sec
+
+            accounts.append(account)
+            match_id_list.append(match_ids)
+
+        except ApiError as e:
+            # 404 = player not found
+            if e.response.status_code == 404:
+                print(f"Spieler nicht gefunden (404): {info}")
+                continue
+            else:
+                raise
+        except Exception as e:
+            print(f"Fehler bei {info}: {e}")
+            continue
+
     return accounts, match_id_list
 
 def fetch_and_save_matches(accounts: List[Dict[str, Any]], match_id_list: List[List[str]], out_json: str):
