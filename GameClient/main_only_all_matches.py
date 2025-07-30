@@ -22,7 +22,7 @@ summoners_txt = 'summoners_euw.txt'
 all_matches_json = '../JSONS/all_matches.json'
 
 # ----------- NEU: Generic Retry-Wrapper für alle API-Requests -----------
-def riot_api_request(func, *args, max_retries=3, **kwargs):
+def riot_api_request(func, *args, max_retries=3, sleep=2, **kwargs):
     for attempt in range(1, max_retries+1):
         try:
             return func(*args, **kwargs)
@@ -30,6 +30,7 @@ def riot_api_request(func, *args, max_retries=3, **kwargs):
             print(f"[Retry {attempt}/{max_retries}] Fehler: {e}")
             if attempt == max_retries:
                 raise
+            time.sleep(sleep)
 
 def read_summoner_list(summoners_txt: str) -> List[List[str]]:
     """Reads summoner names from file and returns a list of [gameName, tagLine]."""
@@ -110,23 +111,37 @@ def fetch_and_save_matches(accounts: List[Dict[str, Any]], match_id_list: List[L
         json.dump(all_matches, file, indent=2)
 
 def enrich_participant_ranks(matches_json: str):
-    """Enriches each participant in all matches with solo queue rank info."""
+    """Enriches each participant in all matches with solo queue rank info.
+    Participants ohne Summoner-ID werden komplett aus dem Match entfernt."""
     with open(matches_json, "r") as file:
         all_matches = json.load(file)
 
-    for match_list in tqdm(all_matches.values(), desc='Enriching matches', position=0):
+    # Wir speichern, ob Matches sich geändert haben (dann leere Matches ggf. auch löschen)
+    matches_to_delete = []
+
+    for team_name, match_list in tqdm(all_matches.items(), desc='Enriching matches', position=0):
         for match in match_list:
-            for participant in match["info"]["participants"]: #tqdm( __, desc='Participant Ranks', leave=False, position=1)
+            participants = match["info"]["participants"]
+            # Speichere neue, nur gültige Teilnehmer
+            new_participants = []
+            for participant in participants:
                 puu_id = participant.get("puuid")
                 if not puu_id:
                     continue
                 try:
-                    summoner_data = riot_api_request(lol_watcher.summoner.by_puuid, "euw1", puu_id) # 1600 requests per Minute
-                    time.sleep(0.1)
-                    summoner_id = summoner_data["id"]
-                    rank_entries = riot_api_request(lol_watcher.league.by_summoner, "euw1", summoner_id) # 100 requests per Minute
-                    time.sleep(0.9)
-                    solo_rank = next((entry for entry in rank_entries if entry["queueType"] == "RANKED_SOLO_5x5"), None)
+                    # Du brauchst keinen riot_watcher.account.by_puuid mehr!
+                    # Nur noch League-by-puuid:
+                    rank_entries = riot_api_request(
+                        lol_watcher.league.by_puuid,
+                        region,
+                        puu_id
+                    )
+                    time.sleep(1.4)
+
+                    solo_rank = next(
+                        (entry for entry in rank_entries if entry.get("queueType") == "RANKED_SOLO_5x5"),
+                        None
+                    )
                     if solo_rank:
                         participant.update({
                             "tier": solo_rank["tier"],
@@ -144,14 +159,28 @@ def enrich_participant_ranks(matches_json: str):
                             "rank": None,
                             "leaguePoints": 0
                         })
-                    #time.sleep(0.5)
+
+                    # **Nur wenn der Teilnehmer OK ist, in die Liste aufnehmen:**
+                    new_participants.append(participant)
+
                 except Exception as e:
-                    print(f"Fehler bei {participant.get('summonerName', '??')}: {e}")
-                    participant.update({
-                        "tier": "ERROR",
-                        "rank": None,
-                        "leaguePoints": None
-                    })
+                    print(f"Fehler bei {participant.get('summonerName', '??')} ({puu_id}): {e}")
+                    time.sleep(2)
+                    # Fehlerhafte Teilnehmer auch einfach SKIPPEN, nicht übernehmen!
+                    continue
+
+            # Jetzt alle Teilnehmer ersetzen:
+            match["info"]["participants"] = new_participants
+
+        # Optional: Du kannst am Ende prüfen, ob ein Match noch Teilnehmer hat
+        # und sonst das ganze Match löschen:
+        match_list[:] = [m for m in match_list if len(m["info"]["participants"]) > 0]
+        if not match_list:
+            matches_to_delete.append(team_name)
+
+    # Optional: Team-Keys ohne Matches ganz entfernen
+    for key in matches_to_delete:
+        del all_matches[key]
 
     with open(matches_json, "w") as file:
         json.dump(all_matches, file, indent=2)
