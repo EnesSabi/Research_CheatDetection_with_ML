@@ -136,7 +136,7 @@ def enrich_participant_ranks(matches_json: str):
                         region,
                         puu_id
                     )
-                    time.sleep(1.4)
+                    time.sleep(0.7)
 
                     solo_rank = next(
                         (entry for entry in rank_entries if entry.get("queueType") == "RANKED_SOLO_5x5"),
