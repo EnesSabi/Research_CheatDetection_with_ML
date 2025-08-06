@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import glob
 import os
 
-# Only for DeepNote
 path = os.path.join(os.path.dirname(__file__), "NameScrapeTxt")
 
 #Find all files with .txt

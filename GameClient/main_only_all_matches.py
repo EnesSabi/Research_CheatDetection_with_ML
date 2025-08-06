@@ -21,7 +21,7 @@ riot_watcher = RiotWatcher(api_key)
 summoners_txt = 'summoners_euw.txt'
 all_matches_json = '../JSONS/all_matches.json'
 
-# ----------- NEU: Generic Retry-Wrapper für alle API-Requests -----------
+# Retry-Wrapper for all API-Requests
 def riot_api_request(func, *args, max_retries=3, sleep=2, **kwargs):
     for attempt in range(1, max_retries+1):
         try:
@@ -53,7 +53,7 @@ def fetch_accounts_and_matchids(summoner_infos: List[List[str]]) -> (List[Dict[s
         try:
             # Does playername and tag exist?
             if len(info) < 2:
-                print(f"Überspringe fehlerhaften Eintrag (falsches Format): {info}")
+                print(f"Skip faulty entry (wrong format): {info}")
                 continue
 
             # get Account Data
@@ -66,7 +66,7 @@ def fetch_accounts_and_matchids(summoner_infos: List[List[str]]) -> (List[Dict[s
 
             # If Account is empty --> skip
             if not account or "puuid" not in account:
-                print(f"Keine Daten gefunden für: {info}")
+                print(f"Couldn't find data for: {info}")
                 continue
 
             # get Match-IDs
@@ -83,12 +83,12 @@ def fetch_accounts_and_matchids(summoner_infos: List[List[str]]) -> (List[Dict[s
         except ApiError as e:
             # 404 = player not found
             if e.response.status_code == 404:
-                print(f"Spieler nicht gefunden (404): {info}")
+                print(f"Player not found (404): {info}")
                 continue
             else:
                 raise
         except Exception as e:
-            print(f"Fehler bei {info}: {e}")
+            print(f"Error at {info}: {e}")
             continue
 
     return accounts, match_id_list
@@ -99,12 +99,11 @@ def fetch_and_save_matches(accounts: List[Dict[str, Any]], match_id_list: List[L
 
     for account, match_ids in tqdm(zip(accounts, match_id_list), desc='Fetching match data', total=len(accounts)):
         match_data = []
-        for match_id in match_ids: # potenziell Langwierig
+        for match_id in match_ids: # may take some time
             match = riot_api_request(lol_watcher.match.by_id, platform, match_id) # 2000 Req/10 Sec
             match_data.append(match)
             # time.sleep(1.2)  # Respect Riot API rate limits
         all_matches[account['gameName']] = match_data
-        # print(f"Retrieved {len(match_data)} matches for {account['gameName']}")  # Entfernt, ersetzt durch Ladebalken
 
     # Save matches and participants
     with open(out_json, 'w') as file:
@@ -112,25 +111,23 @@ def fetch_and_save_matches(accounts: List[Dict[str, Any]], match_id_list: List[L
 
 def enrich_participant_ranks(matches_json: str):
     """Enriches each participant in all matches with solo queue rank info.
-    Participants ohne Summoner-ID werden komplett aus dem Match entfernt."""
+    Participants without Summoner-ID are completely removed from match."""
     with open(matches_json, "r") as file:
         all_matches = json.load(file)
 
-    # Wir speichern, ob Matches sich geändert haben (dann leere Matches ggf. auch löschen)
+    # Check whether matches have changed (then delete empty matches if necessary)
     matches_to_delete = []
 
     for team_name, match_list in tqdm(all_matches.items(), desc='Enriching matches', position=0):
         for match in match_list:
             participants = match["info"]["participants"]
-            # Speichere neue, nur gültige Teilnehmer
+            # Save new and only valid participants
             new_participants = []
             for participant in participants:
                 puu_id = participant.get("puuid")
                 if not puu_id:
                     continue
                 try:
-                    # Du brauchst keinen riot_watcher.account.by_puuid mehr!
-                    # Nur noch League-by-puuid:
                     rank_entries = riot_api_request(
                         lol_watcher.league.by_puuid,
                         region,
@@ -160,25 +157,24 @@ def enrich_participant_ranks(matches_json: str):
                             "leaguePoints": 0
                         })
 
-                    # **Nur wenn der Teilnehmer OK ist, in die Liste aufnehmen:**
+                    # Only add to the list if the participant is OK
                     new_participants.append(participant)
 
                 except Exception as e:
                     print(f"Fehler bei {participant.get('summonerName', '??')} ({puu_id}): {e}")
                     time.sleep(2)
-                    # Fehlerhafte Teilnehmer auch einfach SKIPPEN, nicht übernehmen!
+                    # Simply SKIP incorrect participants, without saving them
                     continue
 
-            # Jetzt alle Teilnehmer ersetzen:
+            # Now replace all participants:
             match["info"]["participants"] = new_participants
 
-        # Optional: Du kannst am Ende prüfen, ob ein Match noch Teilnehmer hat
-        # und sonst das ganze Match löschen:
+        # Optional: You can check at the end whether a match still has participants and otherwise delete the entire match:
         match_list[:] = [m for m in match_list if len(m["info"]["participants"]) > 0]
         if not match_list:
             matches_to_delete.append(team_name)
 
-    # Optional: Team-Keys ohne Matches ganz entfernen
+    # Optional: Completely remove team_keys without matches
     for key in matches_to_delete:
         del all_matches[key]
 
@@ -202,9 +198,9 @@ def test_summoner_list(summoners_txt: str):
 
 if __name__ == "__main__":
     summoner_infos = read_summoner_list(summoners_txt)
-    accounts, match_id_list = fetch_accounts_and_matchids(summoner_infos) # 8:10 Min mit 2.34s/it - Pause bei 50er --> 1000 Req/Min Grenze
-    fetch_and_save_matches(accounts, match_id_list, all_matches_json) # 4:09 Min mit 1.19s/it - Pause bei 80er --> 1000 Req/Min Grenze
-    enrich_participant_ranks(all_matches_json) # 1:24:47 mit 1.84it/s --> 30 sekunden Run mit 1Min30Sec
+    accounts, match_id_list = fetch_accounts_and_matchids(summoner_infos) # 8:10 min with 2.34s/it - Pause at 50-mark --> 1000 Req/min Limit
+    fetch_and_save_matches(accounts, match_id_list, all_matches_json) # 4:09 min with 1.19s/it - Pause at 80-mark --> 1000 Req/Min Limit
+    enrich_participant_ranks(all_matches_json) # 1:24:47 with 1.84it/s --> 30 sec run with 1Min30Sec
     #12:19
     #1:37:06
     #2:15:35
