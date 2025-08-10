@@ -30,7 +30,7 @@ for file in files:
 players = list(set(players))
 
 print(players)
-print(f"{len(players)} Spieler gefunden")
+print(f"{len(players)} players found")
 
 with open("alle_spieler.txt", "w", encoding="utf-8") as f:
     for p in players:

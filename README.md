@@ -212,7 +212,7 @@ Each model predicts anomalies independently. A **majority vote (Bagging Ensemble
 
 Two ensemble supervised models were trained on features with the weak label `smurf_flag`:
 
-- `RandomForestClassifier` with class balancing
+- `RandomForestClassifier`
 - `XGBoostClassifier` with `scale_pos_weight` for handling imbalance
 
 Models were trained on standardized features, reduced via PCA, and evaluated on held-out test sets.
