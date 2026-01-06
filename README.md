@@ -32,7 +32,7 @@ Make sure you have Python 3.12 and pip installed. Then run:
 - [x] Register and get your Riot API Key at:  
   https://developer.riotgames.com/
 
-- [x] Store your API key securely (in .env-File; excluded in GitRepo)
+- [x] Store your API key securely (in .env-File; excluded in GitRepo, but .env.example-File shows how it could look like)
 ### .env file
 
 ```bash
