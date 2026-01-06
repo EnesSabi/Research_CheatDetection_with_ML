@@ -236,6 +236,10 @@ All models — both supervised and unsupervised — are evaluated using standard
   Area under the receiver operating characteristic curve  
   → Measures the model's ability to distinguish between classes
 
+- **PR-AUC Score**:  
+  Area under the precision–recall curve  
+  → Measures how well the model identifies the positive class across different decision thresholds, especially under strong class imbalance
+
 - **Voting Threshold Sensitivity**:  
   For unsupervised models, majority vote thresholds (e.g., ≥2 of 4) are varied  
   → Higher thresholds reduce false positives but may lower recall
@@ -250,13 +254,14 @@ All models — both supervised and unsupervised — are evaluated using standard
 ### Remarks
 
 - Evaluation was always done on a held-out test set using stratified splits.
-- High Recall with low Precision in unsupervised models indicates strong anomaly sensitivity, but also more false alarms.
-- Supervised models like XGBoost achieved high ROC-AUC (≥0.90) even with dimensionality reduction, indicating strong separability.
+- High Recall with low Precision in unsupervised models indicates strong anomaly sensitivity, but also more false alarms. Achieved a good PR-AUC score (≈0.25)
+- Supervised models like XGBoost achieved high ROC-AUC (≥0.90) and PR-AUC (≈0.80) even with dimensionality reduction, indicating strong separability.
 
 > All evaluations were performed against the weak label `smurf_flag`, which approximates true smurf behavior through engineered heuristics.  
 > This label is not manually verified and may contain noise or incorrect assignments.  
-> Therefore, the models are not expected to achieve perfect alignment, but rather to generalize the underlying behavioral patterns.
-
+> Therefore, the models are not expected to achieve perfect alignment, but rather to generalize the underlying behavioral patterns.   
+> PR-AUC values should be interpreted relative to the class distribution.
+> In this dataset, the positive class represents approximately 2.5 %, which corresponds to the random baseline for PR-AUC.
 
 
 ---
